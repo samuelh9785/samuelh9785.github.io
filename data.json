@@ -1,0 +1,94 @@
+{
+    "mainCarouselProjects": [0, 1, 6],
+    "biography": "Étudiant en Game Design et Programming à Isart Digital. Passionné dans le code au niveau gameplay, j'aime apprendre de nouveau langage et de nouvelle méthode pour avancer.",
+    "projects": [
+        {
+            "name": "test jeu 1",
+            "pictures": [
+                "10548680-3cse6cav-v4.webp",
+                "10548681-cnivxapp-v4.webp",
+                "10548682-bzibjhzt-v4.webp",
+                "10548683-qm6vmkdk-v4.webp",
+                "10548684-qqenez6d-v4.webp"
+            ],
+            "gameEngine": "UE4",
+            "language": "C#",
+            "platform": "patate",
+            "role": "Lead developer",
+            "team": "4 Game Designers & Programmers, 3 Game Artistes, 1 Sound Designers",
+            "link": "https://gamejolt.com/games/mountain_rush/678427",
+            "date": "12/12/2021",
+            "video": null
+        },
+        {
+            "name": "test jeu 2",
+            "pictures": [
+                "10548684-qqenez6d-v4.webp"
+            ],
+            "gameEngine": "UE3",
+            "language": "C#",
+            "platform": "patate",
+            "role": "Lead developer",
+            "team": "4 Game Designers & Programmers, 3 Game Artistes, 1 Sound Designers",
+            "link": "https://gamejolt.com/games/sweet_decay/610610",
+            "date": "12/06/2021",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+            "name": "test jeu 3",
+            "pictures": [
+                "10548684-qqenez6d-v4.webp"
+            ],
+            "gameEngine": "UE4",
+            "language": "C++",
+            "platform": "patate",
+            "role": "Lead developer",
+            "team": "4 Game Designers & Programmers, 3 Game Artistes, 1 Sound Designers",
+            "link": "https://gamejolt.com/games/mountain_rush/678427",
+            "date": "12/12/2021",
+            "video": null
+        },
+        {
+            "name": "test jeu 4",
+            "pictures": [
+                "10548684-qqenez6d-v4.webp"
+            ],
+            "gameEngine": "Godot",
+            "language": "C#",
+            "platform": "patate",
+            "role": "Lead developer",
+            "team": "4 Game Designers & Programmers, 3 Game Artistes, 1 Sound Designers",
+            "link": "https://gamejolt.com/games/sweet_decay/610610",
+            "date": "12/06/2021",
+            "video": null
+        },
+        {
+            "name": "test jeu 5",
+            "pictures": [
+                "10548681-cnivxapp-v4.webp"
+            ],
+            "gameEngine": "Godot",
+            "language": "C",
+            "platform": "patate",
+            "role": "Lead developer",
+            "team": "4 Game Designers & Programmers, 3 Game Artistes, 1 Sound Designers",
+            "link": "https://gamejolt.com/games/mountain_rush/678427",
+            "date": "12/12/2021",
+            "video": null
+        },
+        {
+            "name": "test jeu 6",
+            "pictures": [
+                "10548684-qqenez6d-v4.webp"
+            ],
+            "gameEngine": "UE4",
+            "language": "Python",
+            "platform": "Gamejolt",
+            "role": "Lead developer",
+            "team": "4 Game Designers & Programmers, 3 Game Artistes, 1 Sound Designers",
+            "link": "https://gamejolt.com/games/sweet_decay/610610",
+            "date": "12/06/2021",
+            "video": null
+        }
+    ]
+}
