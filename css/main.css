@@ -1,0 +1,47 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+/* Normalizer */
+@import url('./normalize.css') layer(default);
+
+/* Stylesheets */
+@import url('./blaze.css') layer(default);
+@import url('./slider.css');
+
+html {
+    --c1: #122C34;
+    --c2: #224870;
+    --c3: #2A4494;
+    --c4: #4EA5D9;
+    --c5: #44CFCB;
+    --tag-bg: #FF9901;
+
+    color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Reset of body & title tags margin */
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
+}
+
+.tag {
+    display: inline-block;
+    padding: .2em .4em;
+    background-color: var(--tag-bg);
+    border-radius: 15px;
+    margin: 5px;
+}
+
+@media (width >= 1024px ) {
+    .tag {
+        font-size: 25px;
+    }
+}

@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portefolio Samuel Horau</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google font Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Portefolio Samuel Horau</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+  <section class="blaze-slider">
+    <div class="blaze-container">
+      <div class="blaze-track-container">
+        <div class="blaze-track">
+          <!-- ... -->
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="blaze-pagination"></div>
+    </div>
+  </section>
+
+  <template id="slider-card-template">
+    <article class="slider-card">
+      <div class="picture-wrapper">
+        <img src="#" alt="game picture">
+        <div class="desktop-title">
+          <h3></h3>
+        </div>
+      </div>
+      <div class="title-wrapper">
+        <h3 class="mobile-title"></h3>
+        <p class="tag engine"></p>
+        <p class="tag language"></p>
+        <p class="tag platform"></p>
+      </div>
+      <div class="column-wrapper">
+        <div class="role-wrapper">
+          <p class="tag engine"></p>
+          <p class="tag language"></p>
+          <p class="tag platform"></p>
+          <p class="role"></p>
+        </div>
+        <div class="description-wrapper">
+          <p></p>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- Slider module -->
+  <script src="js/modules/blaze-slider.min.js"></script>
+  <!-- App -->
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
