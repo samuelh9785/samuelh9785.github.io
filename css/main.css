@@ -2,10 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 /* Normalizer */
-@import url('./normalize.css') layer(default);
+@import url('./normalize.css');
+
+/* Modules */
+@import url('./blaze.css');
 
 /* Stylesheets */
-@import url('./blaze.css') layer(default);
+@import url('./about.css');
 @import url('./slider.css');
 
 html {
@@ -15,21 +18,27 @@ html {
     --c4: #4EA5D9;
     --c5: #44CFCB;
     --tag-bg: #FF9901;
+    --grey-btn: #393838;
 
     color: black;
     font-family: 'Inter', sans-serif;
 }
 
 /* Reset of body & title tags margin */
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
 body {
     width: 100vw;
-    height: 100vh;
+
+    box-sizing: border-box;
+    padding: .8em;
 
     background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
+
+    /* !Dev */
+    margin-bottom: 500px;
 }
 
 .tag {
