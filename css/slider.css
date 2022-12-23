@@ -1,18 +1,11 @@
 .blaze-slider {
     box-sizing: border-box;
-    padding: .8em;
     margin-bottom: 20px;
     width: 100%;
 }
 
 .blaze-track {
     cursor: grabbing;
-}
-
-.slider-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .picture-wrapper {
@@ -22,7 +15,6 @@
 .picture-wrapper img {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: -100px; /* 100px corresponds to the height of desktop title */
 }
 
 /* Only displayed on desktop */
@@ -34,7 +26,7 @@
 
 .desktop-title {
     position: relative;
-    bottom: 200px;
+    bottom: 2em;
 }
 
 .desktop-title h3 {
@@ -71,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .blaze-pagination {
@@ -100,11 +92,13 @@
     .slider-card {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
     .picture-wrapper, .column-wrapper {
-        width: 48%;
-        margin: 0 auto;
+        width: 49%;
     }
+    .picture-wrapper img {margin-bottom: -100px; /* 100px corresponds to the height of desktop title */}
     .desktop-title,
     .description-wrapper {display: block;}
     .title-wrapper {display: none;}
