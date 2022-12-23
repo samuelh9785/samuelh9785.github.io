@@ -47,3 +47,33 @@
     color: white;
     text-decoration: none;
 }
+
+@media (width >= 1024px ) {
+    .about {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-radius: 8px;
+        background-color: var(--c4);
+        box-sizing: border-box;
+    }
+
+    .biography,
+    .contact-form {
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: unset;
+
+        max-width: 700px;
+        width: 50%;
+    }
+
+    .biography {
+        border-right: 1px black solid;
+    }
+
+    .biography p,
+    .contact-form {margin: auto 0;}
+
+    .biography a {display: none;}
+}
