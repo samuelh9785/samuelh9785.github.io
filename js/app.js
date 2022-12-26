@@ -1,5 +1,6 @@
 import about from "./components/about";
 import contactForm from "./components/contactForm";
+import filterSystem from "./components/filterSystem";
 import mainSlider from "./components/mainSlider";
 
 const app = {
@@ -7,6 +8,7 @@ const app = {
         mainSlider.init();
         about.init();
         contactForm.init();
+        filterSystem.init();
 
         console.log('App OK')
     }
