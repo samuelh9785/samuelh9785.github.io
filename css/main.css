@@ -29,16 +29,31 @@ body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
-body {
-    width: 100vw;
-
+.scroll-wrapper {
     box-sizing: border-box;
-    padding: .8em;
+
+    height: 100vh;
+    padding: 0 .8em;
 
     background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
 
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-wrapper section:first-child {
+    padding-top: 10px;
+}
+
+.scroll-wrapper section {
+    scroll-snap-align: start;
+    margin-bottom: 20px;
+}
+
+.scroll-wrapper section:last-child {
     /* !Dev */
-    margin-bottom: 500px;
+    margin-bottom: 1000px;
 }
 
 .tag {

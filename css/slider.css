@@ -1,6 +1,5 @@
 .blaze-slider {
     box-sizing: border-box;
-    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -96,6 +95,7 @@
         justify-content: space-between;
     }
     .picture-wrapper, .column-wrapper {
+        margin-bottom: 0;
         width: 49%;
     }
     .picture-wrapper img {margin-bottom: -100px; /* 100px corresponds to the height of desktop title */}
