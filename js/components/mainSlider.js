@@ -41,7 +41,7 @@ const mainSlider = {
                 // Role
                 newSlide.querySelector('.role').innerHTML = project.role;
 
-                // Role
+                // Description
                 newSlide.querySelector('.description-wrapper p').innerHTML = project.description;
     
                 //? Inserting item
