@@ -9,6 +9,7 @@
 
 /* Stylesheets */
 @import url('./about.css');
+@import url('./projects.css');
 @import url('./slider.css');
 
 html {
@@ -48,12 +49,11 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 .scroll-wrapper section {
     scroll-snap-align: start;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .scroll-wrapper section:last-child {
-    /* !Dev */
-    margin-bottom: 1000px;
+    margin-bottom: 0;
 }
 
 .tag {

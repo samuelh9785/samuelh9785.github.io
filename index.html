@@ -47,7 +47,23 @@
         </form>
       </article>
     </section>
-
+    
+    <section id="projects" class="projects">
+      <div class="filters">
+        <select id="engine">
+          <option>Moteur</option>
+        </select>
+        <select id="language">
+          <option>Langage</option>
+        </select>
+        <select id="Platform">
+          <option>Plateforme</option>
+        </select>
+      </div>
+      <div class="project-list">
+        <!-- ... -->
+      </div>
+    </section>
   </div>
 
   <template id="slider-card-template">
@@ -75,6 +91,16 @@
           <p></p>
         </div>
       </div>
+    </article>
+  </template>
+
+  <template id="project-card-template">
+    <article>
+      <img src="#" alt="game picture">
+      <p class="tag"></p>
+      <p class="tag"></p>
+      <p class="tag"></p>
+      <h3></h3>
     </article>
   </template>
   

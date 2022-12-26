@@ -1,0 +1,41 @@
+.filters,
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    font-size: 1.3em;
+}
+
+.filters {
+    border-radius: 8px;
+    padding: .5em .75em;
+
+    margin-bottom: 15px;
+    
+    background-color: var(--c4);
+}
+
+.filters select {margin: 5px 0;}
+
+.project-list article {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: .5em .75em;
+    
+    background-color: var(--c4);
+}
+
+.project-list article img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-list article h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.8em;
+}
