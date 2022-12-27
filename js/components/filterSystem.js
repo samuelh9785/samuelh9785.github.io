@@ -4,6 +4,11 @@ const filterSystem = {
     init: function () {
         this.fillOptions();
 
+        document.querySelector('select#engine').addEventListener('change', this.handleSelection);
+        document.querySelector('select#language').addEventListener('change', this.handleSelection);
+        document.querySelector('select#platform').addEventListener('change', this.handleSelection);
+        
+
         console.log('Filter system OK')
     },
     fillOptions: function () {
@@ -37,6 +42,7 @@ const filterSystem = {
         gameEngines.forEach(engine => {
             const newOption = document.createElement('option');
             newOption.innerText = engine;
+            newOption.value = engine;
             
             gameEngineSelectElm.appendChild(newOption);
         });
@@ -44,6 +50,7 @@ const filterSystem = {
         languages.forEach(language => {
             const newOption = document.createElement('option');
             newOption.innerText = language;
+            newOption.value = language;
             
             languageSelectElm.appendChild(newOption);
         });
@@ -51,8 +58,34 @@ const filterSystem = {
         platforms.forEach(platform => {
             const newOption = document.createElement('option');
             newOption.innerText = platform;
+            newOption.value = platform;
             
             platformSelectElm.appendChild(newOption);
+        });
+    },
+    handleSelection: function (event) {
+        //? Getting elements
+        const gameEngineSelectElm = document.querySelector('select#engine');
+        const languageSelectElm = document.querySelector('select#language');
+        const platformSelectElm = document.querySelector('select#platform');
+
+        //? Reseting game engine if language is changed and vice versa
+        if (event.currentTarget === gameEngineSelectElm) {
+            languageSelectElm.selectedIndex = 0;
+        } else if (event.currentTarget === languageSelectElm) {
+            gameEngineSelectElm.selectedIndex = 0;
+        }
+       
+        //? Filtering
+        document.querySelectorAll('.project-list article').forEach(project => {
+            const isGameEngineValid = project.querySelector('.engine').innerText === gameEngineSelectElm.value || gameEngineSelectElm.selectedIndex === 0;
+            const isLanguageValid = project.querySelector('.language').innerText === languageSelectElm.value || languageSelectElm.selectedIndex === 0;
+            const isPlatformValid = project.querySelector('.platform').innerText === platformSelectElm.value || platformSelectElm.selectedIndex === 0;
+            if (isGameEngineValid && isLanguageValid && isPlatformValid) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
         });
     }
 }
