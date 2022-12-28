@@ -10,7 +10,7 @@ const projectList = {
         const template = document.querySelector('#project-card-template');
         const projectList = document.querySelector('.project-list');
 
-        data.projects.forEach(project => {
+        data.projects.forEach((project, index) => {
             //? Creating new node
             const newProject = template.content.cloneNode(true);
 
@@ -33,6 +33,9 @@ const projectList = {
             
             //? Inserting item
             projectList.appendChild(newProject);
+
+            // Dataset
+            projectList.querySelector('article:last-child').dataset.index = index;
         });
     }
 }

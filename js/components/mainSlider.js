@@ -12,13 +12,13 @@ const mainSlider = {
         const template = document.querySelector('#slider-card-template');
         const slider = document.querySelector('#main-slider .blaze-track');
 
-        data.projects.forEach(project => {
+        data.projects.forEach((project, index) => {
             if (project.isDisplayedInSlider) {
                 //? Creating new node
                 const newSlide = template.content.cloneNode(true);
     
                 //? Filling new node
-    
+
                 // Picture
                 newSlide.querySelector('img').src = 'image/' + project.pictures[0];
     
@@ -43,9 +43,12 @@ const mainSlider = {
 
                 // Description
                 newSlide.querySelector('.description-wrapper p').innerHTML = project.description;
-    
+                
                 //? Inserting item
                 slider.appendChild(newSlide);
+
+                // Dataset
+                slider.querySelector('article:last-child').dataset.index = index;
             }
         });
     },
