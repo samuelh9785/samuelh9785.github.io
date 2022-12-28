@@ -46,6 +46,16 @@
     margin-top: 5px;
     color: white;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.biography a:hover,
+.biography a:focus,
+.biography a:active,
+.contact-form button:hover,
+.contact-form button:focus,
+.contact-form button:active {
+    background-color: var(--grey-btn-hover);
 }
 
 @media (width >= 1024px ) {
