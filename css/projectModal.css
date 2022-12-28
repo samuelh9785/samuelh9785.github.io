@@ -17,11 +17,10 @@
     margin: auto;
     padding: 1em;
     box-sizing: border-box;
+    position: relative;
 
     background: linear-gradient(180deg, #224870 0%, #2A4494 100%);
     border-radius: 19px;
-    
-    position: relative;
 }
 
 .project-modal>* {margin: 5px 0 10px 0;}
@@ -53,12 +52,22 @@
     font-size: 1.5em;
 }
 
+.project-modal .picture-slider img {
+    border-radius: 8px;
+}
+
 .project-modal .wrapper {
     border-radius: 8px;
     background-color: var(--c4);
     padding: .5em .75em;
     font-size: 1.2em;
     box-sizing: border-box;
+}
+
+.link-wrapper p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .video-wrapper {
