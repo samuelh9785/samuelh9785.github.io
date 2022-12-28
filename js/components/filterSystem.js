@@ -41,7 +41,7 @@ const filterSystem = {
 
         gameEngines.forEach(engine => {
             const newOption = document.createElement('option');
-            newOption.innerText = engine;
+            newOption.textContent = engine;
             newOption.value = engine;
             
             gameEngineSelectElm.appendChild(newOption);
@@ -49,7 +49,7 @@ const filterSystem = {
 
         languages.forEach(language => {
             const newOption = document.createElement('option');
-            newOption.innerText = language;
+            newOption.textContent = language;
             newOption.value = language;
             
             languageSelectElm.appendChild(newOption);
@@ -57,7 +57,7 @@ const filterSystem = {
 
         platforms.forEach(platform => {
             const newOption = document.createElement('option');
-            newOption.innerText = platform;
+            newOption.textContent = platform;
             newOption.value = platform;
             
             platformSelectElm.appendChild(newOption);
@@ -78,9 +78,9 @@ const filterSystem = {
        
         //? Filtering
         document.querySelectorAll('.project-list article').forEach(project => {
-            const isGameEngineValid = project.querySelector('.engine').innerText === gameEngineSelectElm.value || gameEngineSelectElm.selectedIndex === 0;
-            const isLanguageValid = project.querySelector('.language').innerText === languageSelectElm.value || languageSelectElm.selectedIndex === 0;
-            const isPlatformValid = project.querySelector('.platform').innerText === platformSelectElm.value || platformSelectElm.selectedIndex === 0;
+            const isGameEngineValid = project.querySelector('.engine').textContent === gameEngineSelectElm.value || gameEngineSelectElm.selectedIndex === 0;
+            const isLanguageValid = project.querySelector('.language').textContent === languageSelectElm.value || languageSelectElm.selectedIndex === 0;
+            const isPlatformValid = project.querySelector('.platform').textContent === platformSelectElm.value || platformSelectElm.selectedIndex === 0;
             if (isGameEngineValid && isLanguageValid && isPlatformValid) {
                 project.style.display = 'block';
             } else {
