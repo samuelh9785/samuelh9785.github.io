@@ -10,7 +10,7 @@ const mainSlider = {
     },
     fillSlider: function () {
         const template = document.querySelector('#slider-card-template');
-        const slider = document.querySelector('.blaze-track');
+        const slider = document.querySelector('#main-slider .blaze-track');
 
         data.projects.forEach(project => {
             if (project.isDisplayedInSlider) {
@@ -51,7 +51,7 @@ const mainSlider = {
     },
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
-        const el = document.querySelector('.blaze-slider')
+        const el = document.querySelector('section#main-slider')
         new BlazeSlider(el, {
             all: {
                 slidesToShow: 1,

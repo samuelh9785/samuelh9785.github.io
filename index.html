@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class="scroll-wrapper">
-    <section class="blaze-slider">
+    <section id="main-slider" class="blaze-slider">
       <div class="blaze-container">
         <div class="blaze-track-container">
           <div class="blaze-track">
@@ -104,6 +104,58 @@
     </article>
   </template>
   
+  <template id="project-modal-template">
+    <div class="modal-wrapper">
+      <article class="project-modal">
+        <button id="exit-btn" class="close-button" aria-label="Close alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3></h3>
+        <div class="picture-slider">
+          <div class="blaze-container">
+            <div class="blaze-track-container">
+              <div class="blaze-track">
+                <!-- ... -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="controls">
+            <button class="blaze-prev">prev</button>
+            <div class="blaze-pagination"></div>
+            <button class="blaze-next">next</button>
+          </div>
+        </div>
+        <p class="tag engine"></p>
+        <p class="tag language"></p>
+        <p class="tag platform"></p>
+        <div class="wrapper">
+          <p>Description : </p>
+        </div>
+        <div class="wrapper">
+          <p>Rôle : </p>
+        </div>
+        <div class="wrapper">
+          <p>Equipe : </p>
+        </div>
+        <div class="wrapper">
+          <p>Lien : <a href="#"></a></p>
+        </div>
+        <div class="wrapper">
+          <p>Date : </p>
+        </div>
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+    </div>
+  </template>
+
   <!-- App -->
   <script type="module" src="js/app.js"></script>
 </body>

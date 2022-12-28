@@ -1,0 +1,77 @@
+.modal-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    
+    backdrop-filter: blur(10px);
+    
+    display: flex;
+}
+
+.project-modal {
+    width: 95%;
+    height: 95vh;
+    max-width: 1000px;
+    overflow-y: auto;
+    margin: auto;
+    padding: 1em;
+    box-sizing: border-box;
+
+    background: linear-gradient(180deg, #224870 0%, #2A4494 100%);
+    border-radius: 19px;
+    
+    position: relative;
+}
+
+.project-modal>* {margin: 5px 0 10px 0;}
+.project-modal>*:last-child {margin-bottom: 0;}
+
+.project-modal #exit-btn {
+    all: unset;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 6px 16px 0 0;
+
+    font-size: 2.8em;
+    cursor: pointer;
+    color: #aeb3e4;
+}
+
+.project-modal #exit-btn:hover,
+.project-modal #exit-btn:focus,
+.project-modal #exit-btn:active {
+    color: #878baa;
+}
+
+.project-modal h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.project-modal .wrapper {
+    border-radius: 8px;
+    background-color: var(--c4);
+    padding: .5em .75em;
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

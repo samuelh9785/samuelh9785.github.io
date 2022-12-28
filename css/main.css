@@ -9,6 +9,7 @@
 
 /* Stylesheets */
 @import url('./about.css');
+@import url('./projectModal.css');
 @import url('./projects.css');
 @import url('./slider.css');
 
@@ -20,6 +21,7 @@ html {
     --c5: #44CFCB;
     --tag-bg: #FF9901;
     --grey-btn: #393838;
+    --grey-btn-hover: #494949;
 
     color: black;
     font-family: 'Inter', sans-serif;
