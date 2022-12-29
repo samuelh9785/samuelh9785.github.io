@@ -10,19 +10,7 @@ const projectList = {
         const template = document.querySelector('#project-card-template');
         const projectList = document.querySelector('.project-list');
 
-        const projects = data.projects;
-
-        // Sort projects by date from newest to oldest
-        projects.sort((a, b) => {
-            // a is newer than b
-            if (a.date > b.date) return 1;
-            // a is older than b
-            if (a.date < b.date) return -1;
-            // a & b are equals
-            return 0;
-        });
-
-        projects.forEach((project, index) => {
+        data.projects.forEach((project, index) => {
             //? Creating new node
             const newProject = template.content.cloneNode(true);
 
