@@ -26,7 +26,7 @@
 .project-modal>* {margin: 5px 0 10px 0;}
 .project-modal>*:last-child {margin-bottom: 0;}
 
-.project-modal #exit-btn {
+.project-modal .close-button {
     all: unset;
 
     position: absolute;
@@ -39,9 +39,9 @@
     color: #aeb3e4;
 }
 
-.project-modal #exit-btn:hover,
-.project-modal #exit-btn:focus,
-.project-modal #exit-btn:active {
+.project-modal .close-button:hover,
+.project-modal .close-button:focus,
+.project-modal .close-button:active {
     color: #878baa;
 }
 

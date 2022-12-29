@@ -14,7 +14,19 @@ const projectModal = {
         projectModal.startSlider();
     },
     closeModal: function () {
-        
+        document.querySelector('.modal-wrapper').remove();
+    },
+    bindCloseEventListeners: function () {
+        const modalWrapperElm = document.querySelector('.modal-wrapper');
+
+        // Close button
+        modalWrapperElm.querySelector('.close-button').addEventListener('click', this.closeModal);
+
+        // Clicking outside the modal
+        modalWrapperElm.addEventListener('click', function (event) {
+            if (event.target !== modalWrapperElm) return;
+            projectModal.closeModal();
+        });
     },
     createModal: function (projetKey) {
         const template = document.querySelector('#project-modal-template');
@@ -58,6 +70,9 @@ const projectModal = {
 
         //? Inserting item
         document.body.prepend(modalElm);
+
+        //? Binding close event listeners
+        this.bindCloseEventListeners();
     },
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
