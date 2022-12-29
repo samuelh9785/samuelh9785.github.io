@@ -3,7 +3,13 @@ import data from '../../data.json' assert {type: 'json'};
 
 const projectModal = {
     init: function () {
-        document.querySelectorAll('.project').forEach(projectElm => {
+        // Slides
+        document.querySelectorAll('.slider-card .picture-wrapper').forEach(pictureWrapperElm => {
+            pictureWrapperElm.addEventListener('click', this.openModal);
+        });
+
+        // Projects card
+        document.querySelectorAll('.project-list article').forEach(projectElm => {
             projectElm.addEventListener('click', this.openModal);
         });
 
@@ -65,8 +71,10 @@ const projectModal = {
             sliderElm.appendChild(newSlide);
         });
 
-        if (project.pictures.length === 1)
+        if (project.pictures.length === 1) {
             modalElm.querySelector('.picture-slider .controls').style.display = 'none';
+            modalElm.querySelector('.picture-slider .blaze-track').style.cursor = 'default';
+        }
 
         //? Inserting item
         document.body.prepend(modalElm);
@@ -81,6 +89,7 @@ const projectModal = {
             all: {
                 slidesToShow: 1,
                 loop: true,
+                draggable: true,
 
                 // autoplay
                 enableAutoplay: true,

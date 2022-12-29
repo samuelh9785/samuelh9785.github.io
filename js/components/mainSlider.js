@@ -11,6 +11,7 @@ const mainSlider = {
     fillSlider: function () {
         const template = document.querySelector('#slider-card-template');
         const slider = document.querySelector('#main-slider .blaze-track');
+        let slidesCounter = 0;
 
         data.projects.forEach((project, index) => {
             if (project.isDisplayedInSlider) {
@@ -48,9 +49,15 @@ const mainSlider = {
                 slider.appendChild(newSlide);
 
                 // Dataset
-                slider.querySelector('article:last-child').dataset.index = index;
+                slider.querySelector('article:last-child .picture-wrapper').dataset.index = index;
+
+                slidesCounter++;
             }
         });
+
+        if (slidesCounter === 1) {
+            document.querySelector('#main-slider .controls').style.display = 'none';
+        }
     },
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
@@ -59,6 +66,7 @@ const mainSlider = {
             all: {
                 slidesToShow: 1,
                 loop: true,
+                draggable: false,
 
                 // autoplay
                 enableAutoplay: true,

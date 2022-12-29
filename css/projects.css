@@ -26,6 +26,15 @@
     padding: .5em .75em;
     
     background-color: var(--c4);
+    cursor: pointer;
+
+    transition: all .1s ease;
+}
+
+.project-list article:hover,
+.project-list article:focus,
+.project-list article:active {
+    transform: scale(1.01) rotate(3deg);
 }
 
 .project-list article img {

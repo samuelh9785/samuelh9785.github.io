@@ -3,12 +3,16 @@
     width: 100%;
 }
 
-.blaze-track {
-    cursor: grabbing;
-}
-
 .picture-wrapper {
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.picture-wrapper:hover,
+.picture-wrapper:focus,
+.picture-wrapper:active {
+    transform: scale(0.96) rotate(3deg);
 }
 
 .picture-wrapper img {
