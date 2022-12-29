@@ -7,11 +7,19 @@ const projectModal = {
         // Slides
         document.querySelectorAll('.slider-card .picture-wrapper').forEach(pictureWrapperElm => {
             pictureWrapperElm.addEventListener('click', this.openModal);
+            pictureWrapperElm.addEventListener('keydown', (event) =>{
+                if (event.code !== 'Space' && event.code !== 'Enter') return;
+                this.openModal(event);
+            });
         });
 
         // Projects card
         document.querySelectorAll('.project-list article').forEach(projectElm => {
             projectElm.addEventListener('click', this.openModal);
+            projectElm.addEventListener('keydown', (event) =>{
+                if (event.code !== 'Space' && event.code !== 'Enter') return;
+                this.openModal(event);
+            });
         });
 
         window.addEventListener('resize', this.defineCSSVariables);
@@ -24,6 +32,8 @@ const projectModal = {
         projectModal.bindCloseEventListeners();
         projectModal.defineCSSVariables();
         modalScrollbar.init();
+        
+        document.querySelector('.project-modal').focus();
     },
     closeModal: function () {
         document.querySelector('.modal-wrapper').remove();
@@ -33,6 +43,10 @@ const projectModal = {
 
         // Close button
         modalWrapperElm.querySelector('.close-button').addEventListener('click', this.closeModal);
+        modalWrapperElm.addEventListener('keydown', (event) =>{
+            if (event.code !== 'Escape') return;
+            this.closeModal();
+        });
 
         // Clicking outside the modal
         modalWrapperElm.addEventListener('click', function (event) {

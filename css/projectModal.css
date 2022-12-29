@@ -47,6 +47,8 @@
     color: #878baa;
 }
 
+.project-modal .close-button:focus-visible {outline: -webkit-focus-ring-color auto 1px;}
+
 .project-modal h3 {
     text-align: center;
     text-transform: uppercase;
@@ -88,6 +90,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.link-wrapper a,
+.link-wrapper a:visited {
+    color: inherit;
 }
 
 .video-wrapper {

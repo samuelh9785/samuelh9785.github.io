@@ -86,6 +86,8 @@
     transition: transform 200ms ease, background-color 300ms ease;
 }
 
+.blaze-pagination button:focus-visible {outline: -webkit-focus-ring-color auto 1px;}
+
 .blaze-pagination button.active {
     background: var(--c3);
     transform: scale(1.3);
