@@ -1,0 +1,73 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+/* Normalizer */
+@import url('./normalize.css');
+
+/* Modules */
+@import url('./blaze.css');
+
+/* Stylesheets */
+@import url('./about.css');
+@import url('./projectModal.css');
+@import url('./projects.css');
+@import url('./slider.css');
+
+html {
+    --c1: #122C34;
+    --c2: #224870;
+    --c3: #2A4494;
+    --c4: #4EA5D9;
+    --c5: #44CFCB;
+    --tag-bg: #FF9901;
+    --grey-btn: #393838;
+    --grey-btn-hover: #494949;
+
+    color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Reset of body & title tags margin */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.scroll-wrapper {
+    box-sizing: border-box;
+
+    height: 100vh;
+    padding: 0 .8em;
+
+    background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-wrapper section:first-child {
+    padding-top: 10px;
+}
+
+.scroll-wrapper section {
+    scroll-snap-align: start;
+    margin-bottom: 30px;
+}
+
+.scroll-wrapper section:last-child {
+    margin-bottom: 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: .2em .4em;
+    background-color: var(--tag-bg);
+    border-radius: 15px;
+    margin: 5px;
+}
+
+@media (width >= 1024px ) {
+    .tag {
+        font-size: 25px;
+    }
+}
