@@ -12,7 +12,7 @@
 .picture-wrapper:hover,
 .picture-wrapper:focus,
 .picture-wrapper:active {
-    transform: scale(0.96) rotate(3deg);
+    transform: scale(0.96) rotate(1deg);
 }
 
 .picture-wrapper img {

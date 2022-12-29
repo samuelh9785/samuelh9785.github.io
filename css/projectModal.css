@@ -11,8 +11,10 @@
 
 .project-modal {
     width: 95%;
-    height: 95vh;
+    height: auto;
     max-width: 970px;
+    max-height: 95vh;
+    
     overflow-y: auto;
     margin: auto;
     padding: 1em;
@@ -118,13 +120,13 @@
 
     .modal-wrapper .scrollbar {
         width: 6px;
-        height: calc(95vh - 32px);
+        height: calc(var(--modal-height) - 32px);
         padding: 1px;
         box-sizing: border-box;
 
         position: fixed;
-        top: calc(2.5vh + 16px);
-        right: calc(((100vw - 970px) / 2) + 5px);
+        top: calc((100vh - var(--modal-height)) / 2 + 16px);
+        right: calc((100vw - 970px) / 2 + 5px);
 
         background-color: #aaaaaa;
         border-radius: 3px;

@@ -14,12 +14,15 @@ const projectModal = {
             projectElm.addEventListener('click', this.openModal);
         });
 
+        window.addEventListener('resize', this.defineCSSVariables);
+
         console.log('Project modal OK')
     },
     openModal: function (event) {
         projectModal.createModal(event.currentTarget.dataset.index);
         projectModal.startSlider();
         projectModal.bindCloseEventListeners();
+        projectModal.defineCSSVariables();
         modalScrollbar.init();
     },
     closeModal: function () {
@@ -36,6 +39,11 @@ const projectModal = {
             if (event.target !== modalWrapperElm) return;
             projectModal.closeModal();
         });
+    },
+    defineCSSVariables: function () {
+        const modalElm = document.querySelector('.project-modal');
+
+        document.documentElement.style.setProperty('--modal-height', modalElm.offsetHeight + 'px');
     },
     createModal: function (projetKey) {
         const template = document.querySelector('#project-modal-template');

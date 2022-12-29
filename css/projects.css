@@ -16,7 +16,11 @@
     background-color: var(--c4);
 }
 
-.filters select {margin: 5px 0;}
+.filters select {
+    margin: 5px 0;
+    padding: 0.1em 0.2em;
+    border-radius: 15px;
+}
 
 .project-list article {
     box-sizing: border-box;
