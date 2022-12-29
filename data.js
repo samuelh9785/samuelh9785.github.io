@@ -1,4 +1,4 @@
-{
+const data = {
     "biography": "Étudiant en Game Design et Programming à Isart Digital. Passionné dans le code au niveau gameplay, j'aime apprendre de nouveau langage et de nouvelle méthode pour avancer.",
     "projects": [
         {
@@ -108,4 +108,6 @@
             "isDisplayedInSlider": true
         }
     ]
-}
+};
+
+export default data;
