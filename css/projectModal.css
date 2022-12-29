@@ -12,7 +12,7 @@
 .project-modal {
     width: 95%;
     height: 95vh;
-    max-width: 1000px;
+    max-width: 970px;
     overflow-y: auto;
     margin: auto;
     padding: 1em;
@@ -52,8 +52,22 @@
     font-size: 1.5em;
 }
 
+.modal-wrapper .blaze-container,
+.modal-wrapper .blaze-track-container,
+.modal-wrapper .blaze-track,
+.modal-wrapper img {
+    width: 100%;
+}
+
 .project-modal .blaze-track {
+    text-align: center;
     cursor: grabbing;
+}
+
+.modal-wrapper .blaze-track>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-modal .picture-slider img {
@@ -87,4 +101,51 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+@media (width >= 1024px) {
+    /* ? Custom scrollbar  */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .project-modal::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .project-modal {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .modal-wrapper .scrollbar {
+        width: 6px;
+        height: calc(95vh - 32px);
+        padding: 1px;
+        box-sizing: border-box;
+
+        position: fixed;
+        top: calc(2.5vh + 16px);
+        right: calc(((100vw - 970px) / 2) + 5px);
+
+        background-color: #aaaaaa;
+        border-radius: 3px;
+    }
+
+    .modal-wrapper .scrollbar-thumb {
+        position: relative;
+        width: 4px;
+        border-radius: 2px;
+        background-color: var(--grey-btn-hover);
+    }
+
+    .modal-wrapper .blaze-container,
+    .modal-wrapper .blaze-track-container,
+    .modal-wrapper .blaze-track,
+    .modal-wrapper img {
+        width: auto;
+        height: 100%;
+    }
+
+    .modal-wrapper .picture-slider {
+        height: calc(938px * 9 / 16); /* 16:9 */
+    }    
 }

@@ -1,4 +1,5 @@
-.blaze-slider {
+.blaze-slider,
+.picture-slider {
     --slides-to-show: 1;
     --slide-gap: 20px;
     direction: ltr

@@ -1,5 +1,6 @@
 import BlazeSlider from "../modules/blaze-slider.min.js"
 import data from '../../data.json' assert {type: 'json'};
+import modalScrollbar from "./modalScrollbar.js";
 
 const projectModal = {
     init: function () {
@@ -18,6 +19,8 @@ const projectModal = {
     openModal: function (event) {
         projectModal.createModal(event.currentTarget.dataset.index);
         projectModal.startSlider();
+        projectModal.bindCloseEventListeners();
+        modalScrollbar.init();
     },
     closeModal: function () {
         document.querySelector('.modal-wrapper').remove();
@@ -48,11 +51,11 @@ const projectModal = {
         modalElm.querySelector('.engine')               .textContent = project.gameEngine;
         modalElm.querySelector('.language')             .textContent = project.language;
         modalElm.querySelector('.platform')             .textContent = project.platform;
-        modalElm.querySelector('.description-wrapper p').innerHTML += project.description;
-        modalElm.querySelector('.role-wrapper p')       .innerHTML += project.role;
-        modalElm.querySelector('.team-wrapper p')       .innerHTML += project.team;
+        modalElm.querySelector('.description-wrapper p').innerHTML  += project.description;
+        modalElm.querySelector('.role-wrapper p')       .innerHTML  += project.role;
+        modalElm.querySelector('.team-wrapper p')       .innerHTML  += project.team;
         modalElm.querySelector('.link-wrapper a')       .textContent += project.link;
-        modalElm.querySelector('.link-wrapper a')       .href        += project.link;
+        modalElm.querySelector('.link-wrapper a')       .href        = project.link;
         const dateArray = project.date.split('-'); // Dates are stored as YYYY-MM format
         modalElm.querySelector('.date-wrapper p')       .textContent += `${dateArray[1]}/${dateArray[0]} - ${project.duration}`;
 
@@ -65,10 +68,12 @@ const projectModal = {
 
         // Picture slider
         project.pictures.forEach(picture => {
-            const newSlide = document.createElement('img');
-            newSlide.src = 'image/' + picture;
-            newSlide.alt = 'Game picture';
+            const newSlide = document.createElement('div');
+            const newImg = document.createElement('img');
+            newImg.src = 'image/' + picture;
+            newImg.alt = 'Game picture';
 
+            newSlide.appendChild(newImg);
             sliderElm.appendChild(newSlide);
         });
 
@@ -79,9 +84,6 @@ const projectModal = {
 
         //? Inserting item
         document.body.prepend(modalElm);
-
-        //? Binding close event listeners
-        this.bindCloseEventListeners();
     },
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
