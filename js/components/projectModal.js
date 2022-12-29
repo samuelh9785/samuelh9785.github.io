@@ -53,7 +53,8 @@ const projectModal = {
         modalElm.querySelector('.team-wrapper p')       .innerHTML += project.team;
         modalElm.querySelector('.link-wrapper a')       .textContent += project.link;
         modalElm.querySelector('.link-wrapper a')       .href        += project.link;
-        modalElm.querySelector('.date-wrapper p')       .textContent += project.date + ' - ' + project.duration;
+        const dateArray = project.date.split('-'); // Dates are stored as YYYY-MM format
+        modalElm.querySelector('.date-wrapper p')       .textContent += `${dateArray[1]}/${dateArray[0]} - ${project.duration}`;
 
         // Video
         if (null !== project.video) {
