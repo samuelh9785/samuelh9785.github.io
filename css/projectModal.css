@@ -150,7 +150,7 @@
     .modal-wrapper .blaze-track-container,
     .modal-wrapper .blaze-track,
     .modal-wrapper img {
-        width: auto;
+        width: inherit;
         height: 100%;
     }
 
