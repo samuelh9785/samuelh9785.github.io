@@ -10,7 +10,6 @@ const contactForm = {
     },
     handleSubmit: function (event) {
         event.preventDefault();
-        debugger;
         
         // generate a five digit number for the contact_number variable
         document.querySelector('input[name=contact_number]').value = Math.random() * 100000 | 0;
