@@ -28,6 +28,29 @@ const data = {
     "biography": "Je m'appelle Samuel HOARAU et je suis un étudiant en Game Design & Programming. Passionné par les jeux vidéo et la programmation, j'adore mettre mes compétences en pratique pour créer des expériences de jeu uniques et divertissantes. Mon expertise est principalement axée sur la programmation gameplay, UI et serveur, et j'aime explorer de nouvelles technologies et domaines de la programmation en dehors de mes études. Je suis enthousiaste à l'idée de poursuivre ma carrière dans l'industrie du jeu vidéo et de travailler sur de nouveaux projets passionnants.",
     "projects": [
         {
+            "name": "The Spirit's Eye",
+            "description": "Un jeune garçon se perd dans une grande forêt après s'être disputé avec son ami... Aidez le à quitter la forêt et à découvrir ses secrets dans ce sokoban-like en 3D avec beaucoup de rebondissements !",
+            "pictures": [
+                "SpiritsEyes_House1.png",
+                "SpiritsEyes_House2.png",
+                "SpiritsEyes_Gameplay1.png",
+                "SpiritsEyes_Gameplay2.png",
+                "SpiritsEyes_Gameplay3.png",
+                "SpiritsEyes_Gameplay4.png",
+                "SpiritsEyes_End.png",
+            ],
+            "gameEngine": "Unreal",
+            "language": "Blueprint",
+            "platform": "PC",
+            "role": "Je me suis occupé principalement de la juiciness, du système de sauvegarde ainsi que du blocking des niveaux",
+            "team": "5 Game Designers & Programmers",
+            "link": "https://gamejolt.com/games/thespiritseyes/785724",
+            "date": "2022-12",
+            "duration": "2 mois",
+            "video": null,
+            "isDisplayedInSlider": true
+        },
+        {
             "name": "Kancel Kultur",
             "description": "Vous en avez marre des célébrités qui polluent en utilisant des jets privés ? Vous êtes au bon endroit ! Donner leur une leçon après leur sortie de l'avion dans ce jeu de tape taupe !",
             "pictures": [
