@@ -42,7 +42,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
 
 .scroll-wrapper section:first-child {
@@ -50,7 +49,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 .scroll-wrapper section {
-    scroll-snap-align: start;
     margin-bottom: 30px;
 }
 
