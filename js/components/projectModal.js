@@ -56,6 +56,7 @@ const projectModal = {
     },
     defineCSSVariables: function () {
         const modalElm = document.querySelector('.project-modal');
+        if (null === modalElm) return;
 
         document.documentElement.style.setProperty('--modal-height', modalElm.offsetHeight + 'px');
     },
