@@ -28,6 +28,27 @@ const data = {
     "biography": "Je m'appelle Samuel HOARAU et je suis un étudiant en Game Design & Programming. Passionné par les jeux vidéo et la programmation, j'adore mettre mes compétences en pratique pour créer des expériences de jeu uniques et divertissantes. Mon expertise est principalement axée sur la programmation gameplay, UI et serveur, et j'aime explorer de nouvelles technologies et domaines de la programmation en dehors de mes études. Je suis enthousiaste à l'idée de poursuivre ma carrière dans l'industrie du jeu vidéo et de travailler sur de nouveaux projets passionnants.",
     "projects": [
         {
+            "name": "Tahiti Trouble",
+            "description": "Plongez dans l'aventure palpitante sur l'île de Papeete qui est chamboulé ! Préparez-vous à affronter les Beebots, abeilles mécaniques redoutables. Oserez-vous relever le défi et sauver cette île de l'emprise des Beebots ? Préparez-vous à une aventure inoubliable où chaque bataille compte !",
+            "pictures": [
+                "TahitiTrouble_Splashart.png",
+                "TahitiTrouble_Plage.png",
+                "TahitiTrouble_Market.png",
+                "TahitiTrouble_Hive.png",
+                "TahitiTrouble_Fight.png",
+            ],
+            "gameEngine": "Unreal",
+            "language": "Blueprint",
+            "platform": "PC",
+            "role": "Je me suis occupé de l'interface utilisateur, le système de mission, la juiciness, tout ce qui concerne l'interaction entre le joueur et le monde, boucle victoire/défaite, le système d'expérience ainsi que l'intégration des assets",
+            "team": "4 Game Designers & Programmers, 5 Game Designers, 9 Artists, 3 Game Programmers",
+            "link": "https://gamejolt.com/games/TahitiTrouble/809424",
+            "date": "2023-03",
+            "duration": "3 mois",
+            "video": null,
+            "isDisplayedInSlider": true
+        },
+        {
             "name": "The Spirit's Eye",
             "description": "Un jeune garçon se perd dans une grande forêt après s'être disputé avec son ami... Aidez le à quitter la forêt et à découvrir ses secrets dans ce sokoban-like en 3D avec beaucoup de rebondissements !",
             "pictures": [
