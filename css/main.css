@@ -32,29 +32,33 @@ body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+body {
+    background: var(--c2) url(../image/TahitiTrouble_Splashart.png) center center/cover no-repeat;
+    backdrop-filter: blur(3px) brightness(75%);
+}
+
 .scroll-wrapper {
     box-sizing: border-box;
-
     height: 100vh;
-    padding: 0 .8em;
-
-    background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
 
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
-.scroll-wrapper section:first-child {
-    padding-top: 10px;
+main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    
+    margin: auto;
+    padding: 1em;
+
+    background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
 }
 
-.scroll-wrapper section {
-    margin-bottom: 30px;
-}
-
-.scroll-wrapper section:last-child {
-    margin-bottom: 0;
-}
+.scroll-wrapper section {margin-bottom: 30px;}
+.scroll-wrapper section:first-child {padding-top: 10px;}
+.scroll-wrapper section:last-child {margin-bottom: 0;}
 
 .tag {
     display: inline-block;
@@ -65,7 +69,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (width >= 1024px ) {
-    .tag {
-        font-size: 25px;
-    }
+    .tag {font-size: 25px;}
+    .scroll-wrapper {padding: 1em 2em;}
+    main {border-radius: 15px;}
 }
