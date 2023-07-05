@@ -76,6 +76,7 @@
 
 .project-modal .picture-slider img {
     border-radius: 8px;
+    background-color: grey;
 }
 
 .project-modal .wrapper {
