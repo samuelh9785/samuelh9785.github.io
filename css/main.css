@@ -27,13 +27,19 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
+* {
+    transition-property: background-color, background-image, border-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
 /* Reset of body & title tags margin */
 body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
 body {
-    background: var(--c2) url(../image/TahitiTrouble_Splashart.png) center center/cover no-repeat;
+    background: var(--c1) url(../image/TahitiTrouble_Splashart.png) center center/cover no-repeat;
     backdrop-filter: blur(3px) brightness(75%);
 }
 

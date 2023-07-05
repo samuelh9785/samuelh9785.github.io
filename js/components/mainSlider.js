@@ -1,8 +1,11 @@
 import BlazeSlider from "../modules/blaze-slider.min.js"
 import data from '../../data.js';
+import themeManager from "./themeManager.js";
 
 const mainSlider = {
     init: function () {
+        themeManager.init();
+        
         this.fillSlider();
         this.startSlider();
 
@@ -51,6 +54,9 @@ const mainSlider = {
                 // Dataset
                 slider.querySelector('article:last-child .picture-wrapper').dataset.index = index;
 
+                // Theme
+                themeManager.addTheme(slider.querySelector('article:last-child .picture-wrapper'));
+
                 slidesCounter++;
             }
         });
@@ -62,7 +68,7 @@ const mainSlider = {
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
         const el = document.querySelector('section#main-slider')
-        new BlazeSlider(el, {
+        const blazeSlider = new BlazeSlider(el, {
             all: {
                 slidesToShow: 1,
                 loop: true,
@@ -71,7 +77,7 @@ const mainSlider = {
                 // autoplay
                 enableAutoplay: true,
                 stopAutoplayOnInteraction: true,
-                autoplayInterval: 8000,
+                autoplayInterval: 30000,
                 autoplayDirection: 'to left',
 
                 // pagination
@@ -81,7 +87,10 @@ const mainSlider = {
                 transitionDuration: 500,
                 transitionTimingFunction: 'ease',
             },
-        })
+        });
+
+        blazeSlider.onSlide(themeManager.updateTheme);
+        themeManager.updateTheme();
     }
 }
 
