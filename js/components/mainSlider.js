@@ -92,7 +92,13 @@ const mainSlider = {
 
         this.blazeSlider.onSlide(themeManager.updateTheme);
         themeManager.updateTheme();
-    }
+    },
+    pauseSlider: function () {
+        this.blazeSlider.stopAutoplay();
+    },
+    refresh: function () {
+        this.blazeSlider.refresh();
+    },
 }
 
 export default mainSlider;

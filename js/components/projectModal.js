@@ -1,6 +1,7 @@
 import BlazeSlider from "../modules/blaze-slider.min.js"
 import data from '../../data.js';
 import modalScrollbar from "./modalScrollbar.js";
+import mainSlider from "./mainSlider.js";
 
 const projectModal = {
     init: function () {
@@ -32,11 +33,15 @@ const projectModal = {
         projectModal.bindCloseEventListeners();
         projectModal.defineCSSVariables();
         modalScrollbar.init();
+
+        mainSlider.pauseSlider();
         
         document.querySelector('.project-modal').focus();
     },
     closeModal: function () {
         document.querySelector('.modal-wrapper').remove();
+
+        mainSlider.refresh();
     },
     bindCloseEventListeners: function () {
         const modalWrapperElm = document.querySelector('.modal-wrapper');

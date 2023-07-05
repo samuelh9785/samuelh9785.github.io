@@ -21,7 +21,7 @@
     box-sizing: border-box;
     position: relative;
 
-    background: linear-gradient(180deg, #224870 0%, #2A4494 100%);
+    background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%);
     border-radius: 19px;
 }
 
