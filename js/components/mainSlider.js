@@ -11,6 +11,7 @@ const mainSlider = {
 
         console.log('Main slider OK')
     },
+    blazeSlider: null,
     fillSlider: function () {
         const template = document.querySelector('#slider-card-template');
         const slider = document.querySelector('#main-slider .blaze-track');
@@ -68,7 +69,7 @@ const mainSlider = {
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
         const el = document.querySelector('section#main-slider')
-        const blazeSlider = new BlazeSlider(el, {
+        this.blazeSlider = new BlazeSlider(el, {
             all: {
                 slidesToShow: 1,
                 loop: true,
@@ -89,7 +90,7 @@ const mainSlider = {
             },
         });
 
-        blazeSlider.onSlide(themeManager.updateTheme);
+        this.blazeSlider.onSlide(themeManager.updateTheme);
         themeManager.updateTheme();
     }
 }

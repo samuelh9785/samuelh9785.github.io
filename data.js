@@ -3,23 +3,30 @@
  *? data.projects.link should be an URL
  *? data.projects.date must be an string containing the date in YYYY-MM format
  *? data.projects.video must be a string containing a Youtube URL, or null if there is no video to be shown
+ *? data.projects.theme allows you to override calculated theme colors,
+ *?                     if added, it must contain 5 CSS supported colors (hex, rgb() etc.)
+ **                        CSS supported colors : @see https://www.w3schools.com/cssref/css_colors_legal.php
+ **                        Get a color palette from an image : @see https://lokeshdhakar.com/projects/color-thief/s
  * 
  * data {
  *      "biography": string
  *      "projects": [
- *          "name": string,
-            "description": string,
-            "pictures": [string],
-            "gameEngine": string,
-            "language": string,
-            "platform": string,
-            "role": string,
-            "team": string,
-            "link": string,
-            "date": string,
-            "duration": string,
-            "video": string|null,
-            "isDisplayedInSlider": bool
+ *          {
+                "name": string,
+                "description": string,
+                "pictures": [string],
+                "gameEngine": string,
+                "language": string,
+                "platform": string,
+                "role": string,
+                "team": string,
+                "link": string,
+                "date": string,
+                "duration": string,
+                "video": string|null,
+                "isDisplayedInSlider": bool
+                "theme": (optional) [string*5]
+            }
  *      ]
  *  }
  */
@@ -91,7 +98,14 @@ const data = {
             "date": "2022-09",
             "duration": "1 semaine",
             "video": "https://www.youtube.com/watch?v=wnupwnw4SUI",
-            "isDisplayedInSlider": true
+            "isDisplayedInSlider": true,
+            // "theme": [
+            //     '#f0f',
+            //     '#f0f',
+            //     '#f0f',
+            //     '#f0f',
+            //     '#f0f',
+            // ],
         },
         {
             "name": "Atomania",
