@@ -69,14 +69,16 @@
 }
 
 .modal-wrapper .blaze-track>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    aspect-ratio: 16 / 9;
 }
 
 .project-modal .picture-slider img {
     border-radius: 8px;
     background-color: grey;
+    object-fit: contain;
+    height: 100%;
+    max-width: 100%;
+    width: auto;
 }
 
 .project-modal .wrapper {
