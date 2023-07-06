@@ -24,7 +24,10 @@ const modalScrollbar = {
         const scrollHeight = document.querySelector('.project-modal').scrollHeight;
 
         document.querySelector('.modal-wrapper .scrollbar-thumb').style.top = scrollTop/scrollHeight*100 + '%';
-    }
+    },
+    destroy: function () {
+        window.removeEventListener('resize', this.guessHeight);
+    },
 }
 
 export default modalScrollbar;

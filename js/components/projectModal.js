@@ -39,6 +39,9 @@ const projectModal = {
         document.querySelector('.project-modal').focus();
     },
     closeModal: function () {
+        window.removeEventListener('resize', this.defineCSSVariables);
+        modalScrollbar.destroy();
+
         document.querySelector('.modal-wrapper').remove();
 
         mainSlider.refresh();
