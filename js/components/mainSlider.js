@@ -1,13 +1,17 @@
 import BlazeSlider from "../modules/blaze-slider.min.js"
 import data from '../../data.js';
+import themeManager from "./themeManager.js";
 
 const mainSlider = {
     init: function () {
+        themeManager.init();
+        
         this.fillSlider();
         this.startSlider();
 
         console.log('Main slider OK')
     },
+    blazeSlider: null,
     fillSlider: function () {
         const template = document.querySelector('#slider-card-template');
         const slider = document.querySelector('#main-slider .blaze-track');
@@ -51,6 +55,9 @@ const mainSlider = {
                 // Dataset
                 slider.querySelector('article:last-child .picture-wrapper').dataset.index = index;
 
+                // Theme
+                themeManager.addTheme(slider.querySelector('article:last-child .picture-wrapper'));
+
                 slidesCounter++;
             }
         });
@@ -62,7 +69,7 @@ const mainSlider = {
     startSlider: function () {
         // @see https://blaze-slider.dev/docs/demos/
         const el = document.querySelector('section#main-slider')
-        new BlazeSlider(el, {
+        this.blazeSlider = new BlazeSlider(el, {
             all: {
                 slidesToShow: 1,
                 loop: true,
@@ -71,7 +78,7 @@ const mainSlider = {
                 // autoplay
                 enableAutoplay: true,
                 stopAutoplayOnInteraction: true,
-                autoplayInterval: 8000,
+                autoplayInterval: 30000,
                 autoplayDirection: 'to left',
 
                 // pagination
@@ -81,8 +88,17 @@ const mainSlider = {
                 transitionDuration: 500,
                 transitionTimingFunction: 'ease',
             },
-        })
-    }
+        });
+
+        this.blazeSlider.onSlide(themeManager.updateTheme);
+        themeManager.updateTheme();
+    },
+    pauseSlider: function () {
+        this.blazeSlider.stopAutoplay();
+    },
+    refresh: function () {
+        this.blazeSlider.refresh();
+    },
 }
 
 export default mainSlider;

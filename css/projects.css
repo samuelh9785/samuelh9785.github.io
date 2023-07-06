@@ -41,12 +41,19 @@
     transform: scale(1.01) rotate(3deg);
 }
 
+.project-list article .project-picture-wrapper {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 5px;
+}
+
 .project-list article img {
     display: block;
     margin: 0 auto;
-    margin-bottom: 5px;
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
     border-radius: 8px;
+    background-color: grey;
+    object-fit: cover;
 }
 
 .project-list article h3 {
