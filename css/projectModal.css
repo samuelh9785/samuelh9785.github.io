@@ -75,7 +75,7 @@
 .project-modal .picture-slider img {
     border-radius: 8px;
     background-color: grey;
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
     max-width: 100%;
     width: auto;
