@@ -16,10 +16,23 @@
     background-color: var(--c4);
 }
 
+.filters #search-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.filters #search,
 .filters select {
     margin: 5px 0;
     padding: 0.1em 0.2em;
     border-radius: 15px;
+}
+
+.filters #search {
+    width: 100%;
+    padding: 0.25em 0.3em;
+    border: #8a8a8a 1px solid;
 }
 
 .project-list article {
@@ -63,7 +76,6 @@
 }
 
 @media (width >= 768px ) {
-    .project-list article {
-        max-width: 350px;
-    }
+    .filters #search {width: 85%;}
+    .project-list article {max-width: 350px;}
 }

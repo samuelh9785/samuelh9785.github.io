@@ -4,6 +4,8 @@ const filterSystem = {
     init: function () {
         this.fillOptions();
 
+        document.querySelector('input#search').addEventListener('input', this.handleSearch);
+
         document.querySelector('select#engine').addEventListener('change', this.handleSelection);
         document.querySelector('select#language').addEventListener('change', this.handleSelection);
         document.querySelector('select#platform').addEventListener('change', this.handleSelection);
@@ -61,6 +63,13 @@ const filterSystem = {
             newOption.value = platform;
             
             platformSelectElm.appendChild(newOption);
+        });
+    },
+    handleSearch: function (event) {
+        const searchedValue = event.currentTarget.value.trim();
+
+        document.querySelectorAll('.project-list article').forEach(project => {
+            project.style.display = project.querySelector('h3').textContent.toLowerCase().includes(searchedValue) || searchedValue === '' ? 'block' : 'none';
         });
     },
     handleSelection: function (event) {
