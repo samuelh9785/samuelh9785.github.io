@@ -40,8 +40,8 @@ const mainSlider = {
                 newSlide.querySelector('.role-wrapper .language').textContent  = project.language;
     
                 // Platform
-                newSlide.querySelector('.title-wrapper .platform').textContent = project.platform;
-                newSlide.querySelector('.role-wrapper .platform').textContent  = project.platform;
+                newSlide.querySelector('.title-wrapper .platform').textContent = project.platforms;
+                newSlide.querySelector('.role-wrapper .platform').textContent  = project.platforms;
                 
                 // Role
                 newSlide.querySelector('.role').innerHTML = project.role;

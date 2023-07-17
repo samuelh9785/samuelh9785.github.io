@@ -5,11 +5,11 @@ const filterSystem = {
         this.fillOptions();
 
         document.querySelector('input#search').addEventListener('input', this.handleSearch);
+        document.querySelectorAll('.filters input').forEach(input => {
+            input.addEventListener('change', this.handleSelection);
+        });
 
-        document.querySelector('select#engine').addEventListener('change', this.handleSelection);
-        document.querySelector('select#language').addEventListener('change', this.handleSelection);
-        document.querySelector('select#platform').addEventListener('change', this.handleSelection);
-        
+        document.querySelector('.filter-system .reset-wrapper button').addEventListener('click', this.handleReset);
 
         console.log('Filter system OK')
     },
@@ -31,42 +31,103 @@ const filterSystem = {
             }
 
             // Platform
-            if (!platforms.includes(project.platform)) {
-                platforms.push(project.platform);
-            }
+            project.platforms.forEach(platform => {
+                if (!platforms.includes(platform)) {
+                    platforms.push(platform);
+                }
+            });
         });
 
         //? Filling filters options
-        const gameEngineSelectElm = document.querySelector('select#engine');
-        const languageSelectElm = document.querySelector('select#language');
-        const platformSelectElm = document.querySelector('select#platform');
+        const gameEngineListElm = document.querySelector('.filters.engine ul');
+        const languageListElm = document.querySelector('.filters.language ul');
+        const platformListElm = document.querySelector('.filters.platform ul');
 
         gameEngines.forEach(engine => {
-            const newOption = document.createElement('option');
-            newOption.textContent = engine;
-            newOption.value = engine;
-            
-            gameEngineSelectElm.appendChild(newOption);
+            // <li><input type="radio" name="engine" id=""><label for=""><img src="./image/favicon/smth.svg" alt="">Name</label></li>
+            const liElm = document.createElement('li');
+            const inputElm = document.createElement('input');
+            const labelElm = document.createElement('label');
+            const imgElm = document.createElement('img');
+
+            engine = engine.charAt(0).toUpperCase() + engine.slice(1);
+            const snakeCaseEngine = engine.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
+
+            inputElm.type = 'radio';
+            inputElm.name = 'engine';
+            inputElm.id = snakeCaseEngine;
+            liElm.appendChild(inputElm)
+
+            labelElm.setAttribute('for', snakeCaseEngine);
+            labelElm.textContent = engine;
+            liElm.appendChild(labelElm);
+
+            imgElm.src = `./image/icon/${snakeCaseEngine}.svg`;
+            imgElm.alt = `${engine} icon`
+            labelElm.prepend(imgElm);
+
+            gameEngineListElm.appendChild(liElm);
         });
 
         languages.forEach(language => {
-            const newOption = document.createElement('option');
-            newOption.textContent = language;
-            newOption.value = language;
+            // <li><input type="radio" name="language" id=""><label for=""><img src="./image/favicon/smth.svg" alt="">Name</label></li>
+            const liElm = document.createElement('li');
+            const inputElm = document.createElement('input');
+            const labelElm = document.createElement('label');
+            const imgElm = document.createElement('img');
+
+            language = language.charAt(0).toUpperCase() + language.slice(1);
+            const snakeCaseLanguage = language.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
+
+            inputElm.type = 'radio';
+            inputElm.name = 'language';
+            inputElm.id = snakeCaseLanguage;
+            liElm.appendChild(inputElm)
+
+            labelElm.setAttribute('for', snakeCaseLanguage);
+            labelElm.textContent = language;
+            liElm.appendChild(labelElm);
             
-            languageSelectElm.appendChild(newOption);
+            imgElm.src = `./image/icon/${snakeCaseLanguage}.svg`;
+            imgElm.alt = `${language} icon`
+            labelElm.prepend(imgElm);
+
+            languageListElm.appendChild(liElm);
         });
 
         platforms.forEach(platform => {
-            const newOption = document.createElement('option');
-            newOption.textContent = platform;
-            newOption.value = platform;
-            
-            platformSelectElm.appendChild(newOption);
+            // <li><input type="checkbox" name="platform" id=""><label for=""><img src="./image/favicon/smth.svg" alt="">Name</label></li>
+            const liElm = document.createElement('li');
+            const inputElm = document.createElement('input');
+            const labelElm = document.createElement('label');
+            const imgElm = document.createElement('img');
+
+            platform = platform.charAt(0).toUpperCase() + platform.slice(1);
+            const snakeCasePlatform = platform.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
+
+            inputElm.type = 'checkbox';
+            inputElm.name = 'platform';
+            inputElm.id = snakeCasePlatform;
+            liElm.appendChild(inputElm)
+
+            labelElm.setAttribute('for', snakeCasePlatform);
+            labelElm.textContent = platform;
+            liElm.appendChild(labelElm);
+
+            imgElm.src = `./image/icon/${snakeCasePlatform}.svg`;
+            imgElm.alt = `${platform} icon`
+            labelElm.prepend(imgElm);
+
+            platformListElm.appendChild(liElm);
         });
     },
     handleSearch: function (event) {
         const searchedValue = event.currentTarget.value.trim();
+
+        //? Show reset button if needed
+        if (searchedValue !== '') {
+            document.querySelector('.filter-system .reset-wrapper button').classList.remove('hidden');
+        }
 
         document.querySelectorAll('.project-list article').forEach(project => {
             project.style.display = project.querySelector('h3').textContent.toLowerCase().includes(searchedValue) || searchedValue === '' ? 'block' : 'none';
@@ -74,29 +135,61 @@ const filterSystem = {
     },
     handleSelection: function (event) {
         //? Getting elements
-        const gameEngineSelectElm = document.querySelector('select#engine');
-        const languageSelectElm = document.querySelector('select#language');
-        const platformSelectElm = document.querySelector('select#platform');
+        const gameEngineListElm = document.querySelector('.filters.engine ul');
+        const languageListElm = document.querySelector('.filters.language ul');
 
         //? Reseting game engine if language is changed and vice versa
-        if (event.currentTarget === gameEngineSelectElm) {
-            languageSelectElm.selectedIndex = 0;
-        } else if (event.currentTarget === languageSelectElm) {
-            gameEngineSelectElm.selectedIndex = 0;
+        if (event.currentTarget.closest('ul') === gameEngineListElm && document.querySelector('input[name=language]:checked') !== null) {
+            document.querySelector('input[name=language]:checked').checked = false;
+        } else if (event.currentTarget.closest('ul') === languageListElm && document.querySelector('input[name=engine]:checked') !== null) {
+            document.querySelector('input[name=engine]:checked').checked = false;
+        }
+
+        //? Show reset button if needed
+        if (document.querySelector('input[name=engine]:checked') !== null
+        || document.querySelector('input[name=language]:checked') !== null
+        || document.querySelector('input[name=platform]:checked') !== null) {
+            document.querySelector('.filter-system .reset-wrapper button').classList.remove('hidden');
         }
        
         //? Filtering
+        const engineSearched = document.querySelector('input[name=engine]:checked') !== null ? document.querySelector('input[name=engine]:checked').id : null;
+        const languageSearched = document.querySelector('input[name=language]:checked') !== null ? document.querySelector('input[name=language]:checked').id : null;
+        const platformsSearched = Array.from(document.querySelectorAll('input[name=platform]:checked')).map(platform => {return platform.id;});
+
         document.querySelectorAll('.project-list article').forEach(project => {
-            const isGameEngineValid = project.querySelector('.engine').textContent === gameEngineSelectElm.value || gameEngineSelectElm.selectedIndex === 0;
-            const isLanguageValid = project.querySelector('.language').textContent === languageSelectElm.value || languageSelectElm.selectedIndex === 0;
-            const isPlatformValid = project.querySelector('.platform').textContent === platformSelectElm.value || platformSelectElm.selectedIndex === 0;
-            if (isGameEngineValid && isLanguageValid && isPlatformValid) {
+            if (
+                (project.dataset.engine === engineSearched || engineSearched === null) 
+                && (project.dataset.language === languageSearched || languageSearched === null) 
+                && (project.dataset.platforms.split(',').some(platform => platformsSearched.includes(platform)) || platformsSearched.length === 0) 
+            ) {
                 project.style.display = 'block';
             } else {
                 project.style.display = 'none';
             }
         });
-    }
+    },
+    handleReset: function () {
+        document.querySelector('input#search').value = '';
+
+        if (document.querySelector('input[name=language]:checked') !== null) {
+            document.querySelector('input[name=language]:checked').checked = false;
+        }
+
+        if (document.querySelector('input[name=engine]:checked') !== null) {
+            document.querySelector('input[name=engine]:checked').checked = false;
+        }
+
+        document.querySelectorAll('input[name=platform]:checked').forEach(platform => {
+            platform.checked = false;
+        });
+
+        document.querySelector('.filter-system .reset-wrapper button').classList.add('hidden');
+
+        // Trigger change event to update project list
+        document.querySelector('input#search').dispatchEvent(new Event('change'));
+        document.querySelector('input[name=engine]').dispatchEvent(new Event('change'));
+    },
 }
 
 export default filterSystem;

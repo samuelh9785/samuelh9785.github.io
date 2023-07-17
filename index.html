@@ -73,19 +73,31 @@
       </section>
       
       <section id="projects" class="projects">
-        <div class="filters">
+        <div class="filter-system">
           <div id="search-wrapper">
             <input type="search" placeholder="Recherche..." id="search">
           </div>
-          <select id="engine">
-            <option>Moteur</option>
-          </select>
-          <select id="language">
-            <option>Langage</option>
-          </select>
-          <select id="platform">
-            <option>Plateforme</option>
-          </select>
+          <div class="filters engine">
+            <h3>Moteur</h3>
+            <ul>
+              <!-- ... -->
+            </ul>
+          </div>
+          <div class="filters language">
+            <h3>Langage</h3>
+            <ul>
+              <!-- ... -->
+            </ul>
+          </div>
+          <div class="filters platform">
+            <h3>Plateforme</h3>
+            <ul>
+              <!-- ... -->
+            </ul>
+          </div>
+          <div class="reset-wrapper">
+            <button type="reset" class="hidden">Réinitialiser</button>
+          </div>
         </div>
         <div class="project-list">
           <!-- ... -->
@@ -133,7 +145,6 @@
       </div>
       <p class="tag engine"></p>
       <p class="tag language"></p>
-      <p class="tag platform"></p>
       <h3></h3>
     </article>
   </template>

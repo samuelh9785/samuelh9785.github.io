@@ -26,7 +26,13 @@ const projectList = {
             newProject.querySelector('.language').textContent = project.language;
 
             // Platform
-            newProject.querySelector('.platform').textContent = project.platform;
+            project.platforms.forEach(platform => {
+                const pElm = document.createElement('p');
+                pElm.classList.add('tag', 'platform')
+                pElm.textContent = platform;
+
+                newProject.querySelector('.language').after(pElm);
+            });
 
             // Title
             newProject.querySelector('h3').textContent = project.name;
@@ -36,6 +42,9 @@ const projectList = {
 
             // Dataset
             projectList.querySelector('article:last-child').dataset.index = index;
+            projectList.querySelector('article:last-child').dataset.engine = project.gameEngine.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
+            projectList.querySelector('article:last-child').dataset.language = project.language.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
+            projectList.querySelector('article:last-child').dataset.platforms = project.platforms.map(platform => platform.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, ''));
         });
     }
 }
