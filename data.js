@@ -4,12 +4,18 @@
  *? data.projects.date must be an string containing the date in YYYY-MM format
  *? data.projects.video must be a string containing a Youtube URL, or null if there is no video to be shown
  *? data.projects.theme allows you to override calculated theme colors,
- *?                     if added, it must contain 5 CSS supported colors (hex, rgb() etc.)
+ *?                     If added, it must contain 5 CSS supported colors (hex, rgb() etc.)
  **                        CSS supported colors : @see https://www.w3schools.com/cssref/css_colors_legal.php
  **                        Get a color palette from an image : @see https://lokeshdhakar.com/projects/color-thief/s
+ *? data.images allows you to override which picture will be used for engines, languages & platforms
+ *?                     By default, the app will look for a picture with the same name than the engine, language or platform with an .svg extension
+ *?                     If set to null, no image will be used
+ *?                     Pictures must be stored in ./image/icon folder
+ **                         E.g. "Ren'py": "renpy.png"  // Will use renpy.png instead of Ren'py.svg
+ **                              "Blueprint": null,     // Won't use any image
  * 
  * data {
- *      "biography": string
+ *      "biography": string,
  *      "projects": [
  *          {
                 "name": string,
@@ -17,17 +23,20 @@
                 "pictures": [string],
                 "gameEngine": string,
                 "language": string,
-                "platform": string,
+                "platforms": [string],
                 "role": string,
                 "team": string,
                 "link": string,
                 "date": string,
                 "duration": string,
                 "video": string|null,
-                "isDisplayedInSlider": bool
-                "theme": (optional) [string*5]
+                "isDisplayedInSlider": bool,
+                "theme": (optional) [string*5],
             }
- *      ]
+ *      ],
+ *      "images": (optional) {
+ *          string: string|null
+ *      },
  *  }
  */
 
@@ -46,7 +55,7 @@ const data = {
             ],
             "gameEngine": "Unreal",
             "language": "Blueprint",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Je me suis occupé de l'interface utilisateur, le système de mission, la juiciness, tout ce qui concerne l'interaction entre le joueur et le monde, boucle victoire/défaite, le système d'expérience ainsi que l'intégration des assets",
             "team": "4 Game Designers & Programmers, 5 Game Designers, 9 Artists, 3 Game Programmers",
             "link": "https://gamejolt.com/games/TahitiTrouble/809424",
@@ -69,7 +78,7 @@ const data = {
             ],
             "gameEngine": "Unreal",
             "language": "Blueprint",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Je me suis occupé principalement de la juiciness, du système de sauvegarde ainsi que du blocking des niveaux",
             "team": "5 Game Designers & Programmers",
             "link": "https://gamejolt.com/games/thespiritseyes/785724",
@@ -91,7 +100,7 @@ const data = {
             ],
             "gameEngine": "Unity",
             "language": "C#",
-            "platform": "Mobile",
+            "platforms": ["PC", "Mobile"],
             "role": "Je me suis occupé de l'aléatoire controlé pour l'apparition des célébrités ainsi que l'intégration de la juiciness.",
             "team": "2 Game Designers & Programmers, 4 Game Artistes, 1 Sound Designers",
             "link": "https://gamejolt.com/games/kancelkultur/749717",
@@ -117,7 +126,7 @@ const data = {
             ],
             "gameEngine": "Unity",
             "language": "C#",
-            "platform": "Mobile",
+            "platforms": ["Mobile"],
             "role": "Je me suis principalement occupé de toute l'aspect UI, ainsi que le serveur (sauvergarde, chargement des données)",
             "team": "3 Game Designers & Programmers, 4 Game Designers",
             "link": "https://gamejolt.com/games/atomania/722178",
@@ -139,7 +148,7 @@ const data = {
             ],
             "gameEngine": "Unity",
             "language": "C#",
-            "platform": "Mobile",
+            "platforms": ["Mobile"],
             "role": "Je me suis occupé de la gestion de la caméra (angle de vue, zoom, dezoom, ...), ainsi que des specials features du jeu qui était la langue liane et le stomps",
             "team": "4 Game Designers & Programmers, 8 Game Artistes, 2 Sound Designers",
             "link": "https://gamejolt.com/games/Frogulous/702052",
@@ -161,7 +170,7 @@ const data = {
             ],
             "gameEngine": "Unity",
             "language": "C#",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Dans ce projet, j'ai mis l'accent sur la gestion de la caméra ainsi que la juiciness de l'environnement.",
             "team": "Individuel",
             "link": "https://gamejolt.com/games/mountain_rush/678427",
@@ -181,7 +190,7 @@ const data = {
             ],
             "gameEngine": "Animate",
             "language": "Haxe",
-            "platform": "Mobile",
+            "platforms": ["Mobile"],
             "role": "Dans ce projet, je me suis concentré sur la génération procédural des différentes plateforme et ennemis, ainsi que la juiciness du personnage avec ses animations",
             "team": "Individuel",
             "link": "https://gamejolt.com/games/kill_them_all/610657",
@@ -202,7 +211,7 @@ const data = {
             ],
             "gameEngine": "Animate",
             "language": "Haxe",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Dans ce projet, je me suis occupé de la feature principale : la téléportation des blocs quand on passe au travers ou quand on pousse un bloc à travers un portail",
             "team": "4 Game Designers & Programmers",
             "link": "https://gamejolt.com/games/switch_it/610614",
@@ -224,7 +233,7 @@ const data = {
             ],
             "gameEngine": "Animate",
             "language": "AS3",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Dans ce projet, j'ai mis l'accent sur la spécial feature et sur le level design.",
             "team": "Individuel",
             "link": "https://gamejolt.com/games/sweet_decay/610610",
@@ -242,7 +251,7 @@ const data = {
             ],
             "gameEngine": "Unity",
             "language": "C#",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Dans ce projet, je me suis occupé de la feature du laser qui permet de repousser l'autre joueur ou de se connecter si ils entrent en collision.",
             "team": "2 Game Designers & Programmers, 2 Game Artistes, 1 Sound Designers",
             "link": "https://gamejolt.com/games/eyeloverats/723382",
@@ -259,7 +268,7 @@ const data = {
             ],
             "gameEngine": "Ren'py",
             "language": "Python",
-            "platform": "PC",
+            "platforms": ["PC"],
             "role": "Dans ce projet, je me suis occupé d'une partie du texte pour un des personnage et de la transitions entre chaque scène.",
             "team": "2 Game Designers & Programmers, 1 Game Artistes, 1 Producer, 1 Game Designers",
             "link": "https://gamejolt.com/games/lost_memories/617270",
@@ -268,7 +277,13 @@ const data = {
             "video": null,
             "isDisplayedInSlider": false
         }
-    ]
+    ],
+    "images": {
+        "Ren'py": "renpy.png",
+        "C#": "Csharp.svg",
+        "Blueprint": null,
+        "AS3": null,
+    },
 };
 
 export default data;

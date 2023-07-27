@@ -73,16 +73,31 @@
       </section>
       
       <section id="projects" class="projects">
-        <div class="filters">
-          <select id="engine">
-            <option>Moteur</option>
-          </select>
-          <select id="language">
-            <option>Langage</option>
-          </select>
-          <select id="platform">
-            <option>Plateforme</option>
-          </select>
+        <div class="filter-system">
+          <div id="search-wrapper">
+            <input type="search" placeholder="Recherche..." id="search">
+          </div>
+          <div class="filters engine">
+            <h3>Moteur</h3>
+            <ul>
+              <!-- ... -->
+            </ul>
+          </div>
+          <div class="filters language">
+            <h3>Langage</h3>
+            <ul>
+              <!-- ... -->
+            </ul>
+          </div>
+          <div class="filters platform">
+            <h3>Plateforme</h3>
+            <ul>
+              <!-- ... -->
+            </ul>
+          </div>
+          <div class="reset-wrapper">
+            <button type="reset" class="hidden">Réinitialiser</button>
+          </div>
         </div>
         <div class="project-list">
           <!-- ... -->
@@ -105,15 +120,17 @@
       </div>
       <div class="title-wrapper">
         <h3 class="mobile-title"></h3>
-        <p class="tag engine"></p>
-        <p class="tag language"></p>
-        <p class="tag platform"></p>
+        <div class="tag-wrapper">
+          <p class="tag engine"></p>
+          <p class="tag language"></p>
+        </div>
       </div>
       <div class="column-wrapper">
         <div class="role-wrapper">
-          <p class="tag engine"></p>
-          <p class="tag language"></p>
-          <p class="tag platform"></p>
+          <div class="tag-wrapper">
+            <p class="tag engine"></p>
+            <p class="tag language"></p>
+          </div>
           <p class="role"></p>
         </div>
         <div class="description-wrapper">
@@ -128,9 +145,10 @@
       <div class="project-picture-wrapper">
         <img src="#" alt="game picture">
       </div>
-      <p class="tag engine"></p>
-      <p class="tag language"></p>
-      <p class="tag platform"></p>
+      <div class="tag-wrapper">
+        <p class="tag engine"></p>
+        <p class="tag language"></p>
+      </div>
       <h3></h3>
     </article>
   </template>
@@ -157,9 +175,10 @@
             <button class="blaze-next">next</button>
           </div>
         </div>
-        <p class="tag engine"></p>
-        <p class="tag language"></p>
-        <p class="tag platform"></p>
+        <div class="tag-wrapper">
+          <p class="tag engine"></p>
+          <p class="tag language"></p>
+        </div>
         <div class="description-wrapper wrapper">
           <p>Description : </p>
         </div>

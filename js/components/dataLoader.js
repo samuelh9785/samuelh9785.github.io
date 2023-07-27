@@ -16,6 +16,19 @@ const dataLoader = {
             // a & b are equals
             return 0;
         });
+
+        // Sort project platforms by name from last to first since it is added from last in DOM
+        data.projects.forEach(project => {
+            project.platforms.sort((a, b) => {
+                //? 'a'<'b' is true
+                //? 'a'>'b' is false
+                if (a.name > b.name) return -1;
+                // a is older than b
+                if (a.name < b.name) return 1;
+                // a & b are equals
+                return 0;
+            });
+        });
     }
 }
 

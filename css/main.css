@@ -66,12 +66,33 @@ main {
 .scroll-wrapper section:first-child {padding-top: 10px;}
 .scroll-wrapper section:last-child {margin-bottom: 0;}
 
+.tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .tag {
     display: inline-block;
-    padding: .2em .4em;
+    padding: .3em;
     background-color: var(--tag-bg);
     border-radius: 15px;
     margin: 5px;
+    font-size: 25px;
+}
+
+#main-slider .tag,
+.modal-wrapper .tag {display: inline-flex;}
+
+#main-slider .tag img,
+.modal-wrapper .tag img {
+    margin-right: .1em;
+}
+
+.tag img {
+    background-color: unset;
+    display: block;
+    width: 30px;
+    height: 30px;
 }
 
 button.up {
@@ -107,7 +128,6 @@ button.up:focus-visible {outline: -webkit-focus-ring-color auto 1px;}
 button.up.active {display: block;}
 
 @media (width >= 1024px ) {
-    .tag {font-size: 25px;}
     .scroll-wrapper {padding: 1em 2em;}
     main {border-radius: 15px;}
 }

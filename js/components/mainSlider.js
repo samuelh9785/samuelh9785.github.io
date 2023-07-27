@@ -34,14 +34,45 @@ const mainSlider = {
                 // Engine
                 newSlide.querySelector('.title-wrapper .engine').textContent = project.gameEngine;
                 newSlide.querySelector('.role-wrapper .engine').textContent  = project.gameEngine;
+
+                if (data.images[project.gameEngine] === undefined || data.images[project.gameEngine] !== null) {
+                    const imgElm = document.createElement('img');
+    
+                    imgElm.src = './image/icon/' + (data.images[project.gameEngine] === undefined ? project.gameEngine+'.svg' : data.images[project.gameEngine]);
+                    imgElm.alt = `${project.gameEngine} icon`
+                    newSlide.querySelector('.title-wrapper .engine').prepend(imgElm);
+                    newSlide.querySelector('.role-wrapper .engine').prepend(imgElm.cloneNode());
+                }
     
                 // Language
                 newSlide.querySelector('.title-wrapper .language').textContent = project.language;
                 newSlide.querySelector('.role-wrapper .language').textContent  = project.language;
+
+                if (data.images[project.language] === undefined || data.images[project.language] !== null) {
+                    const imgElm = document.createElement('img');
+    
+                    imgElm.src = './image/icon/' + (data.images[project.language] === undefined ? project.language+'.svg' : data.images[project.language]);
+                    imgElm.alt = `${project.language} icon`
+                    newSlide.querySelector('.title-wrapper .language').prepend(imgElm);
+                    newSlide.querySelector('.role-wrapper .language').prepend(imgElm.cloneNode());
+                }
     
                 // Platform
-                newSlide.querySelector('.title-wrapper .platform').textContent = project.platform;
-                newSlide.querySelector('.role-wrapper .platform').textContent  = project.platform;
+                project.platforms.forEach(platform => {
+                    const pElm = document.createElement('p');
+                    const imgElm = document.createElement('img');
+                    
+                    pElm.classList.add('tag', 'platform')
+                    pElm.textContent = platform;
+
+                    imgElm.src = './image/icon/' + (data.images[platform] === undefined ? platform+'.svg' : data.images[platform]);
+                    imgElm.alt = `${platform} icon`
+    
+                    pElm.prepend(imgElm);
+                    
+                    newSlide.querySelector('.title-wrapper .language').after(pElm);
+                    newSlide.querySelector('.role-wrapper .language').after(pElm.cloneNode(true));
+                });
                 
                 // Role
                 newSlide.querySelector('.role').innerHTML = project.role;

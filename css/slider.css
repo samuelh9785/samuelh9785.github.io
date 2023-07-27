@@ -26,7 +26,7 @@
 
 /* Only displayed on desktop */
 .desktop-title,
-.role-wrapper .tag,
+.role-wrapper .tag-wrapper,
 .description-wrapper {
     display: none;
 }
@@ -109,6 +109,7 @@
     background-position: center;
     background-size: 100%;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath fill='%2337e2d5' d='M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z'/%3E%3C/svg%3E");
+    transition: none;
 }
 
 .blaze-next {
@@ -130,5 +131,5 @@
     .desktop-title,
     .description-wrapper {display: block;}
     .title-wrapper {display: none;}
-    .role-wrapper .tag {display: inline-block;}
+    .role-wrapper .tag-wrapper {display: flex;}
 }
