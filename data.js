@@ -4,12 +4,18 @@
  *? data.projects.date must be an string containing the date in YYYY-MM format
  *? data.projects.video must be a string containing a Youtube URL, or null if there is no video to be shown
  *? data.projects.theme allows you to override calculated theme colors,
- *?                     if added, it must contain 5 CSS supported colors (hex, rgb() etc.)
+ *?                     If added, it must contain 5 CSS supported colors (hex, rgb() etc.)
  **                        CSS supported colors : @see https://www.w3schools.com/cssref/css_colors_legal.php
  **                        Get a color palette from an image : @see https://lokeshdhakar.com/projects/color-thief/s
+ *? data.images allows you to override which picture will be used for engines, languages & platforms
+ *?                     By default, the app will look for a picture with the same name than the engine, language or platform with an .svg extension
+ *?                     If set to null, no image will be used
+ *?                     Pictures must be stored in ./image/icon folder
+ **                         E.g. "Ren'py": "renpy.png"  // Will use renpy.png instead of Ren'py.svg
+ **                              "Blueprint": null,     // Won't use any image
  * 
  * data {
- *      "biography": string
+ *      "biography": string,
  *      "projects": [
  *          {
                 "name": string,
@@ -24,10 +30,13 @@
                 "date": string,
                 "duration": string,
                 "video": string|null,
-                "isDisplayedInSlider": bool
-                "theme": (optional) [string*5]
+                "isDisplayedInSlider": bool,
+                "theme": (optional) [string*5],
             }
- *      ]
+ *      ],
+ *      "images": (optional) {
+ *          string: string|null
+ *      },
  *  }
  */
 
@@ -268,7 +277,13 @@ const data = {
             "video": null,
             "isDisplayedInSlider": false
         }
-    ]
+    ],
+    "images": {
+        "Ren'py": "renpy.png",
+        "C#": "Csharp.svg",
+        "Blueprint": null,
+        "AS3": null,
+    },
 };
 
 export default data;

@@ -26,7 +26,7 @@
 
 /* Only displayed on desktop */
 .desktop-title,
-.role-wrapper .tag,
+.role-wrapper .tag-wrapper,
 .description-wrapper {
     display: none;
 }
@@ -131,5 +131,5 @@
     .desktop-title,
     .description-wrapper {display: block;}
     .title-wrapper {display: none;}
-    .role-wrapper .tag {display: inline-block;}
+    .role-wrapper .tag-wrapper {display: flex;}
 }

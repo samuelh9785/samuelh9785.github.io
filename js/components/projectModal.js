@@ -81,7 +81,6 @@ const projectModal = {
         modalElm.querySelector('h3')                    .textContent = project.name;
         modalElm.querySelector('.engine')               .textContent = project.gameEngine;
         modalElm.querySelector('.language')             .textContent = project.language;
-        modalElm.querySelector('.platform')             .textContent = project.platforms;
         modalElm.querySelector('.description-wrapper p').innerHTML  += project.description;
         modalElm.querySelector('.role-wrapper p')       .innerHTML  += project.role;
         modalElm.querySelector('.team-wrapper p')       .innerHTML  += project.team;
@@ -89,6 +88,40 @@ const projectModal = {
         modalElm.querySelector('.link-wrapper a')       .href        = project.link;
         const dateArray = project.date.split('-'); // Dates are stored as YYYY-MM format
         modalElm.querySelector('.date-wrapper p')       .textContent += `${dateArray[1]}/${dateArray[0]} - ${project.duration}`;
+
+        // Engine picture
+        if (data.images[project.gameEngine] === undefined || data.images[project.gameEngine] !== null) {
+            const imgElm = document.createElement('img');
+
+            imgElm.src = './image/icon/' + (data.images[project.gameEngine] === undefined ? project.gameEngine+'.svg' : data.images[project.gameEngine]);
+            imgElm.alt = `${project.gameEngine} icon`
+            modalElm.querySelector('.engine').prepend(imgElm);
+        }
+
+        // Language picture
+        if (data.images[project.language] === undefined || data.images[project.language] !== null) {
+            const imgElm = document.createElement('img');
+
+            imgElm.src = './image/icon/' + (data.images[project.language] === undefined ? project.language+'.svg' : data.images[project.language]);
+            imgElm.alt = `${project.language} icon`
+            modalElm.querySelector('.language').prepend(imgElm);
+        }
+
+        // Platforms
+        project.platforms.forEach(platform => {
+            const pElm = document.createElement('p');
+            const imgElm = document.createElement('img');
+            
+            pElm.classList.add('tag', 'platform')
+            pElm.textContent = platform;
+
+            imgElm.src = './image/icon/' + (data.images[platform] === undefined ? platform+'.svg' : data.images[platform]);
+            imgElm.alt = `${platform} icon`
+
+            pElm.prepend(imgElm);
+            
+            modalElm.querySelector('.language').after(pElm);
+        });
 
         // Video
         if (null !== project.video) {

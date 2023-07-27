@@ -20,16 +20,43 @@ const projectList = {
             newProject.querySelector('img').src = 'image/' + project.pictures[0];
 
             // Engine
-            newProject.querySelector('.engine').textContent = project.gameEngine;
+            if (data.images[project.gameEngine] === undefined || data.images[project.gameEngine] !== null) {
+                const imgElm = document.createElement('img');
+
+                imgElm.src = './image/icon/' + (data.images[project.gameEngine] === undefined ? project.gameEngine+'.svg' : data.images[project.gameEngine]);
+                imgElm.alt = `${project.gameEngine} icon`
+                imgElm.title = project.gameEngine;
+
+                newProject.querySelector('.engine').appendChild(imgElm);
+            } else {
+                newProject.querySelector('.engine').textContent = project.gameEngine;
+            }
 
             // Language
-            newProject.querySelector('.language').textContent = project.language;
+            if (data.images[project.language] === undefined || data.images[project.language] !== null) {
+                const imgElm = document.createElement('img');
+
+                imgElm.src = './image/icon/' + (data.images[project.language] === undefined ? project.language+'.svg' : data.images[project.language]);
+                imgElm.alt = `${project.language} icon`
+                imgElm.title = project.language;
+
+                newProject.querySelector('.language').appendChild(imgElm);
+            } else {
+                newProject.querySelector('.language').textContent = project.language;
+            }
 
             // Platform
             project.platforms.forEach(platform => {
                 const pElm = document.createElement('p');
+                const imgElm = document.createElement('img');
+
+                imgElm.src = './image/icon/' + (data.images[platform] === undefined ? platform+'.svg' : data.images[platform]);
+                imgElm.alt = `${platform} icon`
+                imgElm.title = platform;
+
+                pElm.appendChild(imgElm);
+                
                 pElm.classList.add('tag', 'platform')
-                pElm.textContent = platform;
 
                 newProject.querySelector('.language').after(pElm);
             });

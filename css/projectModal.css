@@ -156,8 +156,4 @@
         width: inherit;
         height: 100%;
     }
-
-    .modal-wrapper .picture-slider {
-        height: calc(938px * 9 / 16); /* 16:9 */
-    }    
 }

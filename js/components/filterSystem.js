@@ -48,23 +48,26 @@ const filterSystem = {
             const liElm = document.createElement('li');
             const inputElm = document.createElement('input');
             const labelElm = document.createElement('label');
-            const imgElm = document.createElement('img');
-
+            
             engine = engine.charAt(0).toUpperCase() + engine.slice(1);
             const snakeCaseEngine = engine.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
-
+            
             inputElm.type = 'radio';
             inputElm.name = 'engine';
             inputElm.id = snakeCaseEngine;
             liElm.appendChild(inputElm)
-
+            
             labelElm.setAttribute('for', snakeCaseEngine);
             labelElm.textContent = engine;
             liElm.appendChild(labelElm);
+            
+            if (data.images[engine] === undefined || data.images[engine] !== null) {
+                const imgElm = document.createElement('img');
 
-            imgElm.src = `./image/icon/${snakeCaseEngine}.svg`;
-            imgElm.alt = `${engine} icon`
-            labelElm.prepend(imgElm);
+                imgElm.src = './image/icon/' + (data.images[engine] === undefined ? engine+'.svg' : data.images[engine]);
+                imgElm.alt = `${engine} icon`
+                labelElm.prepend(imgElm);
+            }
 
             gameEngineListElm.appendChild(liElm);
         });
@@ -74,23 +77,26 @@ const filterSystem = {
             const liElm = document.createElement('li');
             const inputElm = document.createElement('input');
             const labelElm = document.createElement('label');
-            const imgElm = document.createElement('img');
-
+            
             language = language.charAt(0).toUpperCase() + language.slice(1);
             const snakeCaseLanguage = language.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
-
+            
             inputElm.type = 'radio';
             inputElm.name = 'language';
             inputElm.id = snakeCaseLanguage;
             liElm.appendChild(inputElm)
-
+            
             labelElm.setAttribute('for', snakeCaseLanguage);
             labelElm.textContent = language;
             liElm.appendChild(labelElm);
             
-            imgElm.src = `./image/icon/${snakeCaseLanguage}.svg`;
-            imgElm.alt = `${language} icon`
-            labelElm.prepend(imgElm);
+            if (data.images[language] === undefined || data.images[language] !== null) {
+                const imgElm = document.createElement('img');
+                
+                imgElm.src = './image/icon/' + (data.images[language] === undefined ? language+'.svg' : data.images[language]);
+                imgElm.alt = `${language} icon`
+                labelElm.prepend(imgElm);
+            }
 
             languageListElm.appendChild(liElm);
         });
@@ -100,21 +106,22 @@ const filterSystem = {
             const liElm = document.createElement('li');
             const inputElm = document.createElement('input');
             const labelElm = document.createElement('label');
-            const imgElm = document.createElement('img');
-
+            
             platform = platform.charAt(0).toUpperCase() + platform.slice(1);
             const snakeCasePlatform = platform.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
-
+            
             inputElm.type = 'checkbox';
             inputElm.name = 'platform';
             inputElm.id = snakeCasePlatform;
             liElm.appendChild(inputElm)
-
+            
             labelElm.setAttribute('for', snakeCasePlatform);
             labelElm.textContent = platform;
             liElm.appendChild(labelElm);
-
-            imgElm.src = `./image/icon/${snakeCasePlatform}.svg`;
+            
+            const imgElm = document.createElement('img');
+                
+            imgElm.src = './image/icon/' + (data.images[platform] === undefined ? platform+'.svg' : data.images[platform]);
             imgElm.alt = `${platform} icon`
             labelElm.prepend(imgElm);
 
