@@ -128,13 +128,21 @@ const filterSystem = {
             platformListElm.appendChild(liElm);
         });
     },
+    refreshResetButtonDisplay: function () {
+        if (document.querySelector('input#search').value !== ''
+        || document.querySelector('input[name=engine]:checked') !== null
+        || document.querySelector('input[name=language]:checked') !== null
+        || document.querySelector('input[name=platform]:checked') !== null) {
+            document.querySelector('.filter-system .reset-wrapper button').classList.remove('hidden');
+        } else {
+            document.querySelector('.filter-system .reset-wrapper button').classList.add('hidden');
+        }
+    },
     handleSearch: function (event) {
         const searchedValue = event.currentTarget.value.trim();
 
         //? Show reset button if needed
-        if (searchedValue !== '') {
-            document.querySelector('.filter-system .reset-wrapper button').classList.remove('hidden');
-        }
+        filterSystem.refreshResetButtonDisplay();
 
         document.querySelectorAll('.project-list article').forEach(project => {
             project.style.display = project.querySelector('h3').textContent.toLowerCase().includes(searchedValue) || searchedValue === '' ? 'block' : 'none';
@@ -153,11 +161,7 @@ const filterSystem = {
         }
 
         //? Show reset button if needed
-        if (document.querySelector('input[name=engine]:checked') !== null
-        || document.querySelector('input[name=language]:checked') !== null
-        || document.querySelector('input[name=platform]:checked') !== null) {
-            document.querySelector('.filter-system .reset-wrapper button').classList.remove('hidden');
-        }
+        filterSystem.refreshResetButtonDisplay();
        
         //? Filtering
         const engineSearched = document.querySelector('input[name=engine]:checked') !== null ? document.querySelector('input[name=engine]:checked').id : null;
@@ -190,8 +194,6 @@ const filterSystem = {
         document.querySelectorAll('input[name=platform]:checked').forEach(platform => {
             platform.checked = false;
         });
-
-        document.querySelector('.filter-system .reset-wrapper button').classList.add('hidden');
 
         // Trigger change event to update project list
         document.querySelector('input#search').dispatchEvent(new Event('change'));
