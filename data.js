@@ -63,14 +63,14 @@
 const data = {
     "biography": {
         "fr": "Je m'appelle Samuel HOARAU et je suis un étudiant en Game Design & Programming. Passionné par les jeux vidéo et la programmation, j'adore mettre mes compétences en pratique pour créer des expériences de jeu uniques et divertissantes. Mon expertise est principalement axée sur la programmation gameplay, UI et serveur, et j'aime explorer de nouvelles technologies et domaines de la programmation en dehors de mes études. Je suis enthousiaste à l'idée de poursuivre ma carrière dans l'industrie du jeu vidéo et de travailler sur de nouveaux projets passionnants.",
-        "en": "",
+        "en": "My name is Samuel HOARAU, and I am a student in Game Design & Programming. Passionate about video games and programming, I love to put my skills into practice to create unique and entertaining gaming experiences. My expertise is primarily focused on gameplay, UI, and server programming, and I enjoy exploring new technologies and programming domains outside of my studies. I am enthusiastic about pursuing my career in the video game industry and working on exciting new projects.",
     },
     "projects": [
         {
             "name": "Tahiti Trouble",
             "description": {
                 "fr": "Plongez dans l'aventure palpitante sur l'île de Papeete qui est chamboulé ! Préparez-vous à affronter les Beebots, abeilles mécaniques redoutables. Oserez-vous relever le défi et sauver cette île de l'emprise des Beebots ? Préparez-vous à une aventure inoubliable où chaque bataille compte !",
-                "en": "",
+                "en": "Dive into the thrilling adventure on the island of Papeete, which is disrupted! Get ready to confront the formidable mechanical bees, the Beebots. Will you dare to take on the challenge and save this island from the grip of the Beebots? Prepare for an unforgettable adventure where every battle matters!",
             },
             "pictures": [
                 "TahitiTrouble_Splashart.png",
@@ -84,7 +84,7 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Je me suis occupé de l'interface utilisateur, le système de mission, la juiciness, tout ce qui concerne l'interaction entre le joueur et le monde, boucle victoire/défaite, le système d'expérience ainsi que l'intégration des assets",
-                "en": "",
+                "en": "I took care of the user interface, mission system, juiciness, everything related to player-world interaction, win/lose loop, the experience system, as well as asset integration.",
             },
             "team": {
                 "fr": "4 Game Designers & Programmers, 5 Game Designers, 9 Artists, 3 Game Programmers",
@@ -94,7 +94,7 @@ const data = {
             "date": "2023-03",
             "duration": {
                 "fr": "3 mois",
-                "en": "",
+                "en": "3 months",
             },
             "video": null,
             "isDisplayedInSlider": true
@@ -103,7 +103,7 @@ const data = {
             "name": "The Spirit's Eye",
             "description": {
                 "fr": "Un jeune garçon se perd dans une grande forêt après s'être disputé avec son ami... Aidez le à quitter la forêt et à découvrir ses secrets dans ce sokoban-like en 3D avec beaucoup de rebondissements !",
-                "en": "",
+                "en": "A young boy gets lost in a vast forest after having an argument with his friend... Help him escape the forest and uncover its secrets in this 3D sokoban-like game with plenty of twists!",
             },
             "pictures": [
                 "SpiritsEyes_House1.png",
@@ -119,7 +119,7 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Je me suis occupé principalement de la juiciness, du système de sauvegarde ainsi que du blocking des niveaux",
-                "en": "",
+                "en": "I primarily handled the juiciness, the save system, and level blocking.",
             },
             "team": {
                 "fr": "5 Game Designers & Programmers",
@@ -129,7 +129,7 @@ const data = {
             "date": "2022-12",
             "duration": {
                 "fr": "2 mois",
-                "en": "",
+                "en": "2 months",
             },
             "video": null,
             "isDisplayedInSlider": true
@@ -138,7 +138,7 @@ const data = {
             "name": "Kancel Kultur",
             "description": {
                 "fr": "Vous en avez marre des célébrités qui polluent en utilisant des jets privés ? Vous êtes au bon endroit ! Donner leur une leçon après leur sortie de l'avion dans ce jeu de tape taupe !",
-                "en": "",
+                "en": "Are you tired of celebrities polluting with their private jets? You're in the right place! Teach them a lesson after they disembark from the plane in this whack-a-mole game!",
             },
             "pictures": [
                 "KancelKultur_SplashScreen.png",
@@ -153,7 +153,7 @@ const data = {
             "platforms": ["PC", "Mobile"],
             "role": {
                 "fr": "Je me suis occupé de l'aléatoire controlé pour l'apparition des célébrités ainsi que l'intégration de la juiciness.",
-                "en": "",
+                "en": "I handled controlled randomness for the appearance of celebrities and the integration of juiciness.",
             },
             "team": {
                 "fr": "2 Game Designers & Programmers, 4 Game Artistes, 1 Sound Designers",
@@ -163,7 +163,7 @@ const data = {
             "date": "2022-09",
             "duration": {
                 "fr": "1 semaine",
-                "en": "",
+                "en": "1 week",
             },
             "video": "https://www.youtube.com/watch?v=wnupwnw4SUI",
             "isDisplayedInSlider": true,
@@ -179,7 +179,7 @@ const data = {
             "name": "Atomania",
             "description": {
                 "fr": "Atomania est un runner roguelike sur mobile où tu contrôle un atome qui doit traverser différent monde.  Avec tes armes, avance en te frayant un chemin à travers les obstacles que tu rencontreras. Améliore tes armes pour avancer toujours plus loin !",
-                "en": "",
+                "en": "Atomania is a mobile roguelike runner where you control an atom that must traverse different worlds. With your weapons, advance by making your way through the obstacles you encounter. Upgrade your weapons to progress even further!",
             },
             "pictures": [
                 "Atomania_TitleScreen.jpg",
@@ -191,7 +191,7 @@ const data = {
             "platforms": ["Mobile"],
             "role": {
                 "fr": "Je me suis principalement occupé de toute l'aspect UI, ainsi que le serveur (sauvergarde, chargement des données)",
-                "en": "",
+                "en": "I primarily took care of the entire UI aspect, as well as the server (saving and loading data)",
             },
             "team": {
                 "fr": "3 Game Designers & Programmers, 4 Game Designers",
@@ -201,7 +201,7 @@ const data = {
             "date": "2022-04",
             "duration": {
                 "fr": "2 mois",
-                "en": "",
+                "en": "2 months",
             },
             "video": null,
             "isDisplayedInSlider": true
@@ -209,8 +209,8 @@ const data = {
         {
             "name": "Frogulous",
             "description": {
-                "fr": "Vous incarnerez une grande diva en route vers LE bal. Malheureusement, parfois, les choses ne se passent pas comme on le voudrait : sur la route, elle se retrouve sans voix... En un rien de temps, elle se rend chez la fée des bois pour obtenir de l'aide ! Mais la fée paresseuse ne se soucie pas de choses comme ça. Je vous laisse voir ce qui se passera ensuite. :)",
-                "en": "",
+                "fr": "Vous incarnerez une grande diva en route vers LE bal. Malheureusement, parfois, les choses ne se passent pas comme on le voudrait : sur la route, elle se retrouve sans voix... En un rien de temps, elle se rend chez la fée des bois pour obtenir de l'aide ! Mais la fée paresseuse ne se soucie pas de choses comme ça. Je vous laisse voir ce qui se passera ensuite.",
+                "en": "You will embody a grand diva on her way to THE ball. Unfortunately, sometimes things don't go as planned: on the way, she loses her voice... In no time, she heads to the fairy of the woods for help! But the lazy fairy doesn't care about things like that. I'll let you see what happens next.",
             },
             "pictures": [
                 "Frogulous_TitleScreen.png",
@@ -225,7 +225,7 @@ const data = {
             "platforms": ["Mobile"],
             "role": {
                 "fr": "Je me suis occupé de la gestion de la caméra (angle de vue, zoom, dezoom, ...), ainsi que des specials features du jeu qui était la langue liane et le stomps",
-                "en": "",
+                "en": "I was responsible for camera management (view angle, zoom, zoom out, etc.), as well as the game's special features, which included the liana language and the stomps.",
             },
             "team": {
                 "fr": "4 Game Designers & Programmers, 8 Game Artistes, 2 Sound Designers",
@@ -235,7 +235,7 @@ const data = {
             "date": "2022-01",
             "duration": {
                 "fr": "2 mois",
-                "en": "",
+                "en": "2 months",
             },
             "video": null,
             "isDisplayedInSlider": true
@@ -244,7 +244,7 @@ const data = {
             "name": "Mountain Rush",
             "description": {
                 "fr": "Basé sur le jeu RUSH, Mountain Rush est un jeu de réflexion où vous devez amener les blocs de minerais à leur destination.",
-                "en": "",
+                "en": "Based on the game RUSH, Mountain Rush is a puzzle game where you must guide the ore blocks to their destination.",
             },
             "pictures": [
                 "MountainRush_TitleCard.png",
@@ -259,17 +259,17 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Dans ce projet, j'ai mis l'accent sur la gestion de la caméra ainsi que la juiciness de l'environnement.",
-                "en": "",
+                "en": "In this project, I focused on camera management as well as enhancing the environment's juiciness.",
             },
             "team": {
                 "fr": "Individuel",
-                "en": "",
+                "en": "Alone",
             },
             "link": "https://gamejolt.com/games/mountain_rush/678427",
             "date": "2021-11",
             "duration": {
                 "fr": "1 mois",
-                "en": "",
+                "en": "1 month",
             },
             "video": null,
             "isDisplayedInSlider": true
@@ -278,7 +278,7 @@ const data = {
             "name": "Kill Them All",
             "description": {
                 "fr": "Un héros comme les autres parcourt le monde, affronte des ennemis, escalade des montagnes, sans relâche jusqu'à ce qu'il meure dignement.",
-                "en": "",
+                "en": "A hero like any other travels the world, faces enemies, climbs mountains, relentlessly, until he dies honorably.",
             },
             "pictures": [
                 "KillThemAll_Gameplay1.png",
@@ -291,17 +291,17 @@ const data = {
             "platforms": ["Mobile"],
             "role": {
                 "fr": "Dans ce projet, je me suis concentré sur la génération procédural des différentes plateforme et ennemis, ainsi que la juiciness du personnage avec ses animations",
-                "en": "",
+                "en": "In this project, I focused on the procedural generation of various platforms and enemies, as well as enhancing the character's juiciness with its animations.",
             },
             "team": {
                 "fr": "Individuel",
-                "en": "",
+                "en": "Alone",
             },
             "link": "https://gamejolt.com/games/kill_them_all/610657",
             "date": "2021-04",
             "duration": {
                 "fr": "1 mois",
-                "en": "",
+                "en": "1 month",
             },
             "video": null,
             "isDisplayedInSlider": false
@@ -310,7 +310,7 @@ const data = {
             "name": "Switch It",
             "description": {
                 "fr": "Après plusieurs années, un scientifique réussit à créer la téléportation !<br>Enfin presque, le téléporteur ne fait pas ce qu'il veut, ce qui l'a démotivé. Il doit maintenant ranger son laboratoire et les portails qu'il a créés rendent les choses plus compliquées ",
-                "en": "",
+                "en": "After several years, a scientist manages to create teleportation!<br>Well, almost; the teleporter doesn't do what he wants, which has demotivated him. Now he has to tidy up his laboratory, and the portals he created make things more complicated.",
             },
             "pictures": [
                 "SwitchIt_TitleCard.png",
@@ -324,7 +324,7 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Dans ce projet, je me suis occupé de la feature principale : la téléportation des blocs quand on passe au travers ou quand on pousse un bloc à travers un portail",
-                "en": "",
+                "en": "In this project, I took care of the main feature: teleporting blocks when passing through or pushing a block through a portal.",
             },
             "team": {
                 "fr": "4 Game Designers & Programmers",
@@ -334,7 +334,7 @@ const data = {
             "date": "2021-01",
             "duration": {
                 "fr": "2 mois",
-                "en": "",
+                "en": "2 months",
             },
             "video": null,
             "isDisplayedInSlider": false
@@ -343,7 +343,7 @@ const data = {
             "name": "Sweet Decay",
             "description": {
                 "fr": "Bienvenue dans le monde des bonbons ! A bord de votre navire en forme de dent, mangez tous vos ennemis en utilisant la puissance de la téléportation de votre navire.",
-                "en": "",
+                "en": "Welcome to the world of candies! Aboard your tooth-shaped ship, devour all your enemies using the teleportation power of your ship.",
             },
             "pictures": [
                 "SweetDecay_TitleCard.png",
@@ -358,17 +358,17 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Dans ce projet, j'ai mis l'accent sur la spécial feature et sur le level design.",
-                "en": "",
+                "en": "In this project, I emphasized the special feature and the level design.",
             },
             "team": {
                 "fr": "Individuel",
-                "en": "",
+                "en": "Alone",
             },
             "link": "https://gamejolt.com/games/sweet_decay/610610",
             "date": "2020-11",
             "duration": {
                 "fr": "2 mois",
-                "en": "",
+                "en": "2 month",
             },
             "video": null,
             "isDisplayedInSlider": false
@@ -377,7 +377,7 @@ const data = {
             "name": "Eye Love Rats",
             "description": {
                 "fr": "2 rats magiciens cherchent à s'échapper d'un laboratoire magique après que des mages aient expérimenté un sort de battle de regard sur eux. Malgré le fait qu’il ne peuvent pas s'empêcher de se regarder, il vont devoir braver les obstacles en lançant leur laser de l’amitié. ",
-                "en": "",
+                "en": "2 magical rats are trying to escape from a magical laboratory after mages cast a stare-down spell on them. Despite being unable to stop looking at each other, they will have to overcome obstacles by firing their friendship laser.",
             },
             "pictures": [
                 "EyeLoveRats_TitleCard.png",
@@ -388,7 +388,7 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Dans ce projet, je me suis occupé de la feature du laser qui permet de repousser l'autre joueur ou de se connecter si ils entrent en collision.",
-                "en": "",
+                "en": "In this project, I took care of the laser feature that allows pushing the other player away or connecting if they collide.",
             },
             "team": {
                 "fr": "2 Game Designers & Programmers, 2 Game Artistes, 1 Sound Designers",
@@ -398,7 +398,7 @@ const data = {
             "date": "2022-06",
             "duration": {
                 "fr": "3 jours",
-                "en": "",
+                "en": "3 days",
             },
             "video": null,
             "isDisplayedInSlider": false
@@ -407,7 +407,7 @@ const data = {
             "name": "Lost Memories",
             "description": {
                 "fr": "C'est l'histoire d'un homme qui a perdu la mémoire. Au travers de ses actions, il va rencontrer les développeurs de ce jeu pour tenter de retrouver la mémoire.",
-                "en": "",
+                "en": "It's the story of a man who has lost his memory. Through his actions, he will meet the developers of this game in an attempt to regain his memory.",
             },
             "pictures": [
                 "LostMemories_TitleCard.png",
@@ -417,7 +417,7 @@ const data = {
             "platforms": ["PC"],
             "role": {
                 "fr": "Dans ce projet, je me suis occupé d'une partie du texte pour un des personnage et de la transitions entre chaque scène.",
-                "en": "",
+                "en": "In this project, I handled a portion of the text for one of the characters and the transitions between each scene.",
             },
             "team": {
                 "fr": "2 Game Designers & Programmers, 1 Game Artistes, 1 Producer, 1 Game Designers",
@@ -427,7 +427,7 @@ const data = {
             "date": "2021-05",
             "duration": {
                 "fr": "3 jours",
-                "en": "",
+                "en": "3 days",
             },
             "video": null,
             "isDisplayedInSlider": false
