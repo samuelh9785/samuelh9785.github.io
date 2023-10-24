@@ -28,8 +28,10 @@ const mainSlider = {
                 newSlide.querySelector('img').src = 'image/' + project.pictures[0];
     
                 // Title
-                newSlide.querySelector('.desktop-title h3').textContent = project.name;
-                newSlide.querySelector('h3.mobile-title').textContent   = project.name;
+                newSlide.querySelector('.desktop-title h3[lang=fr]').textContent = project.name.fr ?? project.name;
+                newSlide.querySelector('.desktop-title h3[lang=en]').textContent = project.name.en ?? project.name;
+                newSlide.querySelector('h3.mobile-title[lang=fr]').textContent   = project.name.fr ?? project.name;
+                newSlide.querySelector('h3.mobile-title[lang=en]').textContent   = project.name.en ?? project.name;
     
                 // Engine
                 newSlide.querySelector('.title-wrapper .engine').textContent = project.gameEngine;
@@ -75,10 +77,12 @@ const mainSlider = {
                 });
                 
                 // Role
-                newSlide.querySelector('.role').innerHTML = project.role;
+                newSlide.querySelector('.role[lang=fr]').textContent = project.role.fr;
+                newSlide.querySelector('.role[lang=en]').textContent = project.role.en;
 
                 // Description
-                newSlide.querySelector('.description-wrapper p').innerHTML = project.description;
+                newSlide.querySelector('.description-wrapper p[lang=fr]').textContent = project.description.fr;
+                newSlide.querySelector('.description-wrapper p[lang=en]').textContent = project.description.en;
                 
                 //? Inserting item
                 slider.appendChild(newSlide);

@@ -62,7 +62,8 @@ const projectList = {
             });
 
             // Title
-            newProject.querySelector('h3').textContent = project.name;
+            newProject.querySelector('h3[lang=fr]').textContent = project.name.fr ?? project.name;
+            newProject.querySelector('h3[lang=en]').textContent = project.name.en ?? project.name;
             
             //? Inserting item
             projectList.appendChild(newProject);

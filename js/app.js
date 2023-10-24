@@ -1,4 +1,5 @@
 import about from "./components/about.js";
+import changeLanguageButton from "./components/changeLanguageButton.js";
 import contactForm from "./components/contactForm.js";
 import dataLoader from "./components/dataLoader.js";
 import filterSystem from "./components/filterSystem.js";
@@ -11,6 +12,7 @@ const app = {
     init: function () {
         dataLoader.init();
 
+        changeLanguageButton.init();
         mainSlider.init();
         about.init();
         contactForm.init();
