@@ -39,10 +39,11 @@
                     "fr": string,
                     "en": string,
                 },
-                "team": {
-                    "fr": string,
-                    "en": string,
-                },
+                "team": string,
+ ** OR          "team": {
+ **                 "fr": string,
+ **                 "en": string,
+ **             },
                 "link": string,
                 "date": string,
                 "duration": {
@@ -86,10 +87,7 @@ const data = {
                 "fr": "Je me suis occupé de l'interface utilisateur, le système de mission, la juiciness, tout ce qui concerne l'interaction entre le joueur et le monde, boucle victoire/défaite, le système d'expérience ainsi que l'intégration des assets",
                 "en": "I took care of the user interface, mission system, juiciness, everything related to player-world interaction, win/lose loop, the experience system, as well as asset integration.",
             },
-            "team": {
-                "fr": "4 Game Designers & Programmers, 5 Game Designers, 9 Artists, 3 Game Programmers",
-                "en": "",
-            },
+            "team": "4 Game Designers & Programmers, 5 Game Designers, 9 Artists, 3 Game Programmers",
             "link": "https://gamejolt.com/games/TahitiTrouble/809424",
             "date": "2023-03",
             "duration": {
@@ -121,10 +119,7 @@ const data = {
                 "fr": "Je me suis occupé principalement de la juiciness, du système de sauvegarde ainsi que du blocking des niveaux",
                 "en": "I primarily handled the juiciness, the save system, and level blocking.",
             },
-            "team": {
-                "fr": "5 Game Designers & Programmers",
-                "en": "",
-            },
+            "team": "5 Game Designers & Programmers",
             "link": "https://gamejolt.com/games/thespiritseyes/785724",
             "date": "2022-12",
             "duration": {
@@ -155,10 +150,7 @@ const data = {
                 "fr": "Je me suis occupé de l'aléatoire controlé pour l'apparition des célébrités ainsi que l'intégration de la juiciness.",
                 "en": "I handled controlled randomness for the appearance of celebrities and the integration of juiciness.",
             },
-            "team": {
-                "fr": "2 Game Designers & Programmers, 4 Game Artistes, 1 Sound Designers",
-                "en": "",
-            },
+            "team": "2 Game Designers & Programmers, 4 Game Artistes, 1 Sound Designers",
             "link": "https://gamejolt.com/games/kancelkultur/749717",
             "date": "2022-09",
             "duration": {
@@ -193,10 +185,7 @@ const data = {
                 "fr": "Je me suis principalement occupé de toute l'aspect UI, ainsi que le serveur (sauvergarde, chargement des données)",
                 "en": "I primarily took care of the entire UI aspect, as well as the server (saving and loading data)",
             },
-            "team": {
-                "fr": "3 Game Designers & Programmers, 4 Game Designers",
-                "en": "",
-            },
+            "team": "3 Game Designers & Programmers, 4 Game Designers",
             "link": "https://gamejolt.com/games/atomania/722178",
             "date": "2022-04",
             "duration": {
@@ -227,10 +216,7 @@ const data = {
                 "fr": "Je me suis occupé de la gestion de la caméra (angle de vue, zoom, dezoom, ...), ainsi que des specials features du jeu qui était la langue liane et le stomps",
                 "en": "I was responsible for camera management (view angle, zoom, zoom out, etc.), as well as the game's special features, which included the liana language and the stomps.",
             },
-            "team": {
-                "fr": "4 Game Designers & Programmers, 8 Game Artistes, 2 Sound Designers",
-                "en": "",
-            },
+            "team": "4 Game Designers & Programmers, 8 Game Artistes, 2 Sound Designers",
             "link": "https://gamejolt.com/games/Frogulous/702052",
             "date": "2022-01",
             "duration": {
@@ -326,10 +312,7 @@ const data = {
                 "fr": "Dans ce projet, je me suis occupé de la feature principale : la téléportation des blocs quand on passe au travers ou quand on pousse un bloc à travers un portail",
                 "en": "In this project, I took care of the main feature: teleporting blocks when passing through or pushing a block through a portal.",
             },
-            "team": {
-                "fr": "4 Game Designers & Programmers",
-                "en": "",
-            },
+            "team": "4 Game Designers & Programmers",
             "link": "https://gamejolt.com/games/switch_it/610614",
             "date": "2021-01",
             "duration": {
@@ -390,10 +373,7 @@ const data = {
                 "fr": "Dans ce projet, je me suis occupé de la feature du laser qui permet de repousser l'autre joueur ou de se connecter si ils entrent en collision.",
                 "en": "In this project, I took care of the laser feature that allows pushing the other player away or connecting if they collide.",
             },
-            "team": {
-                "fr": "2 Game Designers & Programmers, 2 Game Artistes, 1 Sound Designers",
-                "en": "",
-            },
+            "team": "2 Game Designers & Programmers, 2 Game Artistes, 1 Sound Designers",
             "link": "https://gamejolt.com/games/eyeloverats/723382",
             "date": "2022-06",
             "duration": {
@@ -419,10 +399,7 @@ const data = {
                 "fr": "Dans ce projet, je me suis occupé d'une partie du texte pour un des personnage et de la transitions entre chaque scène.",
                 "en": "In this project, I handled a portion of the text for one of the characters and the transitions between each scene.",
             },
-            "team": {
-                "fr": "2 Game Designers & Programmers, 1 Game Artistes, 1 Producer, 1 Game Designers",
-                "en": "",
-            },
+            "team": "2 Game Designers & Programmers, 1 Game Artistes, 1 Producer, 1 Game Designers",
             "link": "https://gamejolt.com/games/lost_memories/617270",
             "date": "2021-05",
             "duration": {

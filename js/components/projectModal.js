@@ -86,8 +86,8 @@ const projectModal = {
         modalElm.querySelector('.description-wrapper p[lang=en]').textContent += project.description.en;
         modalElm.querySelector('.role-wrapper p[lang=fr]')       .textContent += project.role.fr;
         modalElm.querySelector('.role-wrapper p[lang=en]')       .textContent += project.role.en;
-        modalElm.querySelector('.team-wrapper p[lang=fr]')       .textContent += project.team.fr;
-        modalElm.querySelector('.team-wrapper p[lang=en]')       .textContent += project.team.en;
+        modalElm.querySelector('.team-wrapper p[lang=fr]')       .textContent += project.team.fr ?? project.team;
+        modalElm.querySelector('.team-wrapper p[lang=en]')       .textContent += project.team.en ?? project.team;
         modalElm.querySelector('.link-wrapper p[lang=fr] a')     .textContent += project.link;
         modalElm.querySelector('.link-wrapper p[lang=en] a')     .textContent += project.link;
         modalElm.querySelector('.link-wrapper p[lang=fr] a')     .href        = project.link;
