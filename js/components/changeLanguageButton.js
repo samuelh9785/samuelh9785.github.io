@@ -7,9 +7,9 @@ const changeLanguageButton = {
     init: function () {
         document.querySelector('button#change-language').addEventListener('click', this.handleClick);
         document.querySelector('button#change-language').addEventListener('focus', this.handleHoverAndFocus);
-        document.querySelector('button#change-language').addEventListener('mouseover', this.handleHoverAndFocus);
+        document.querySelector('button#change-language').addEventListener('mouseenter', this.handleHoverAndFocus);
         document.querySelector('button#change-language').addEventListener('blur', this.handleMouseout);
-        document.querySelector('button#change-language').addEventListener('mouseout', this.handleMouseout);
+        document.querySelector('button#change-language').addEventListener('mouseleave', this.handleMouseout);
 
         console.log('Change language button OK')
     },
