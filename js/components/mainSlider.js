@@ -134,6 +134,12 @@ const mainSlider = {
     refresh: function () {
         this.blazeSlider.refresh();
     },
+    refreshLanguage: function () {
+        document.querySelectorAll('.slider-card .picture-wrapper').forEach(slideElm => {
+            slideElm.setAttribute('aria-label', document.querySelector('html').getAttribute('lang') === 'fr' ? 'Ouvrir le projet' : 'Open project');
+            slideElm.setAttribute('title',      document.querySelector('html').getAttribute('lang') === 'fr' ? 'Ouvrir le projet' : 'Open project');
+        });
+    },
 }
 
 export default mainSlider;
