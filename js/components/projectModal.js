@@ -86,15 +86,19 @@ const projectModal = {
         modalElm.querySelector('.description-wrapper p[lang=en]').textContent += project.description.en;
         modalElm.querySelector('.role-wrapper p[lang=fr]')       .textContent += project.role.fr;
         modalElm.querySelector('.role-wrapper p[lang=en]')       .textContent += project.role.en;
-        modalElm.querySelector('.team-wrapper p[lang=fr]')       .textContent += project.team.fr;
-        modalElm.querySelector('.team-wrapper p[lang=en]')       .textContent += project.team.en;
+        modalElm.querySelector('.team-wrapper p[lang=fr]')       .textContent += project.team.fr ?? project.team;
+        modalElm.querySelector('.team-wrapper p[lang=en]')       .textContent += project.team.en ?? project.team;
         modalElm.querySelector('.link-wrapper p[lang=fr] a')     .textContent += project.link;
         modalElm.querySelector('.link-wrapper p[lang=en] a')     .textContent += project.link;
         modalElm.querySelector('.link-wrapper p[lang=fr] a')     .href        = project.link;
         modalElm.querySelector('.link-wrapper p[lang=en] a')     .href        = project.link;
         const dateArray = project.date.split('-'); // Dates are stored as YYYY-MM format
-        modalElm.querySelector('.date-wrapper p[lang=fr]')       .textContent += `${dateArray[1]}/${dateArray[0]} - ${project.duration.fr}`;
-        modalElm.querySelector('.date-wrapper p[lang=en]')       .textContent += `${dateArray[1]}/${dateArray[0]} - ${project.duration.en}`;
+        modalElm.querySelector('.date-wrapper p[lang=fr] time')  .textContent += `${dateArray[1]}/${dateArray[0]}`;
+        modalElm.querySelector('.date-wrapper p[lang=fr] time')  .setAttribute('datetime', project.date);
+        modalElm.querySelector('.date-wrapper p[lang=fr]')       .innerHTML   += `${project.duration.fr}`; // Using innerHTML since <p> element contains a <time> element
+        modalElm.querySelector('.date-wrapper p[lang=en] time')  .textContent += `${dateArray[1]}/${dateArray[0]}`;
+        modalElm.querySelector('.date-wrapper p[lang=en] time')  .setAttribute('datetime', project.date);
+        modalElm.querySelector('.date-wrapper p[lang=en]')       .innerHTML   += `${project.duration.en}`; // Using innerHTML since <p> element contains a <time> element
 
         // Engine picture
         if (data.images[project.gameEngine] === undefined || data.images[project.gameEngine] !== null) {

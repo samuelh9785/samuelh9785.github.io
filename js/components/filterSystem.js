@@ -145,7 +145,10 @@ const filterSystem = {
         filterSystem.refreshResetButtonDisplay();
 
         document.querySelectorAll('.project-list article').forEach(project => {
-            project.style.display = project.querySelector('h3').textContent.toLowerCase().includes(searchedValue) || searchedValue === '' ? 'block' : 'none';
+            project.style.display = 
+                project.querySelector('h3[lang=fr]').textContent.toLowerCase().includes(searchedValue) 
+                || project.querySelector('h3[lang=en]').textContent.toLowerCase().includes(searchedValue) 
+                || searchedValue === '' ? 'block' : 'none';
         });
     },
     handleSelection: function (event) {

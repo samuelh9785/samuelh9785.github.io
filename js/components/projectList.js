@@ -74,7 +74,13 @@ const projectList = {
             projectList.querySelector('article:last-child').dataset.language = project.language.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, '');
             projectList.querySelector('article:last-child').dataset.platforms = project.platforms.map(platform => platform.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z]/g, ''));
         });
-    }
+    },
+    refreshLanguage: function () {
+        document.querySelectorAll('.project-list article').forEach(articleElm => {
+            articleElm.setAttribute('aria-label', document.querySelector('html').getAttribute('lang') === 'fr' ? 'Ouvrir le projet' : 'Open project');
+            articleElm.setAttribute('title',      document.querySelector('html').getAttribute('lang') === 'fr' ? 'Ouvrir le projet' : 'Open project');
+        });
+    },
 }
 
 export default projectList;

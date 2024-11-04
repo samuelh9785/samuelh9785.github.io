@@ -39,8 +39,8 @@
   <div class="scroll-wrapper">
     <main>
       <button id="change-language" class="french" aria-label="Changer de langue" title="Changer de langue" type="button">
-        <img src="image/icon/flag-fr.svg" alt="French flag">
-        <img src="image/icon/flag-en.svg" alt="English flag">
+        <img src="image/icon/flag-fr.svg" alt="Drapeau français">
+        <img src="image/icon/flag-en.svg" alt="Drapeau anglais">
       </button>
 
       <section id="main-slider" class="blaze-slider">
@@ -118,7 +118,7 @@
 
   <template id="slider-card-template">
     <article class="slider-card">
-      <div class="picture-wrapper" tabindex="0">
+      <div class="picture-wrapper" tabindex="0" aria-label="Ouvrir le projet" title="Ouvrir le projet">
         <img src="#" alt="Splash art">
         <div class="desktop-title">
           <h3 lang="fr"></h3>
@@ -151,7 +151,7 @@
   </template>
 
   <template id="project-card-template">
-    <article tabindex="0">
+    <article tabindex="0" aria-label="Ouvrir le projet" title="Ouvrir le projet">
       <div class="project-picture-wrapper">
         <img src="#" alt="Splash art">
       </div>
@@ -208,8 +208,8 @@
           <p lang="en">Link: <a href="#"></a></p>
         </div>
         <div class="date-wrapper wrapper">
-          <p lang="fr">Date : </p>
-          <p lang="en">Date: </p>
+          <p lang="fr">Date : <time datetime=""></time> - </p>
+          <p lang="en">Date: <time datetime=""></time> - </p>
         </div>
         <div class="video-wrapper">
           <iframe 
