@@ -67,6 +67,38 @@ const data = {
     },
     "projects": [
         {
+            "name": "GumGum Cup",
+            "description": {
+                "fr": "Laissez libre cours à votre folie et à votre créativité dans les affrontements féroces de la GumGum Cup ! Lancez, étirez et soufflez votre bubble-gum avec l'aide de votre compagnon en gomme pour éjecter, piéger et capturer vos ennemis et prendre le contrôle de l'arène ! Mais attention. L'inattendu a une grande place dans la compétition ! Saurez-vous prédire la prochaine attaque ?",
+                "en": "Let your craziness and creativity overflow in the fierce confrontations of the GumGum Cup! Throw, stretch and blow your bubble-gum with the help of your gummy companion to eject, trap and capture your enemies and take control of the arena! But, be careful. The unexpected has a big place in the competition! Will you be able to predict the next attack?",
+            },
+            "pictures": [
+                "GumGumCup_Splashart.png",
+                "GumGumCup_Gameplay1.png",
+                "GumGumCup_Gameplay2.png",
+                "GumGumCup_Gameplay3.png",
+            ],
+            "gameEngine": "Unreal",
+            "language": "Blueprint",
+            "platforms": ["PC"],
+            "role": {
+                "fr": "Je me suis occupé de l'interfacte utilisateur du jeu, le mode multijoueur local,  certaines features du jeu, plusieurs briques de gameplay, le système de boucle de jeu ainsi que la juiciness et le gamefeel.",
+                "en": "I took care of the game's user interface, the local multiplayer mode, some of the game's features, several gameplay bricks, the game loop system, as well as juiciness and gamefeel.",
+            },
+            "team": {
+                "fr": "3 Game Designers & Programmers, 3 Game Designers, 5 Artists, 2 Game Programmers, 2 Producers, 1 Sound Designer",
+                "en": "",
+            },
+            "link": "https://isart-digital.itch.io/gumgumcup",
+            "date": "2024-09",
+            "duration": {
+                "fr": "9 mois",
+                "en": "9 months",
+            },
+            "video": "https://www.youtube.com/watch?v=X-hn8qAKvSU",
+            "isDisplayedInSlider": true
+        },
+        {
             "name": "Tahiti Trouble",
             "description": {
                 "fr": "Plongez dans l'aventure palpitante sur l'île de Papeete qui est chamboulé ! Préparez-vous à affronter les Beebots, abeilles mécaniques redoutables. Oserez-vous relever le défi et sauver cette île de l'emprise des Beebots ? Préparez-vous à une aventure inoubliable où chaque bataille compte !",
