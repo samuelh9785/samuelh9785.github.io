@@ -75,9 +75,9 @@ const data = {
             },
             "pictures": [
                 "GumGumCup_Splashart.png",
-                "GumGumCup_Gameplay1.png",
-                "GumGumCup_Gameplay2.png",
-                "GumGumCup_Gameplay3.png",
+                "GumGumCup_Gameplay1.jpg",
+                "GumGumCup_Gameplay2.jpg",
+                "GumGumCup_Gameplay3.jpg",
             ],
             "gameEngine": "Unreal",
             "language": "Blueprint",
